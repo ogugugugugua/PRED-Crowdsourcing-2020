@@ -1,0 +1,44 @@
+{
+  "title": "PRED Transcription carnets de terrains en archéologie",
+  "short_title": "PRED crowdsourcing",
+  "summary": "",
+  "background": "/images/background.jpg",
+  "admin_email": "",
+  "logo": "/images/logo.png",
+  "favicon": "/images/favicon.ico",
+  "privacy_policy": "",
+  "terms_map": {
+    "group": "collection",
+    "subject set": "page",
+    "subject": "page",
+    "mark": "region"
+  },
+  "team_emails": [
+    "maximilien.rioult@etu.univ-nantes.fr",
+    "yulin.xie@etu.univ-nantes.fr"
+  ],
+  "team": [
+    {
+      "name": "Maximilien Rioult"
+    },
+    {
+      "name": "Yulin Xie"
+    }
+   ],
+  "organizations": [
+    {
+      "title": "NYPL",
+      "description": "Books, mostly.",
+      "url":"http://nypl.org",
+      "logo": "http://cdn-prod.www.aws.nypl.org/sites/all/themes/nypl_new/images/main-logo.png"
+    }
+  ],
+  "menus": {
+    "main": [
+      {"label": "Intro", "page": "intro"},
+      {"label": "Data", "page": "data"},
+      {"label": "About", "page": "about"}
+    ],
+    "footer": []
+  }
+}
