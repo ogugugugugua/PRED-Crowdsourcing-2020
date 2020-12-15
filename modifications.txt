@@ -1,0 +1,5 @@
+footer:
+./pred-crowdsourcing-2020/project/pred-carnets/content/partials/footer.html.erb
+
+
+

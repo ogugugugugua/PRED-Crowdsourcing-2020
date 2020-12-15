@@ -1,5 +1,5 @@
 {
-  "title": "PRED Transcription carnets de terrains en archéologie",
+  "title": "PRED Transcription \ncarnets de terrains \nen archéologie",
   "short_title": "PRED crowdsourcing",
   "summary": "",
   "background": "/images/background.jpg",
@@ -27,10 +27,10 @@
    ],
   "organizations": [
     {
-      "title": "NYPL",
+      "title": "Polytech Nantes",
       "description": "Books, mostly.",
-      "url":"http://nypl.org",
-      "logo": "http://cdn-prod.www.aws.nypl.org/sites/all/themes/nypl_new/images/main-logo.png"
+      "url":"https://polytech.univ-nantes.fr/",
+      "logo": "https://polytech.univ-nantes.fr/medias/photo/polytech-nantes-q-univ_1530525910404-jpg?ID_FICHE=944315"
     }
   ],
   "menus": {
