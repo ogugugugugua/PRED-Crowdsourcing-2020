@@ -1,5 +1,5 @@
 {
-  "name":"Marquage",
+  "name":"mark",
   "label":"Mark Workflow",
   "subject_fetch_limit":"10",
   "generates_subjects": true,
@@ -8,26 +8,82 @@
   "first_task":"mark_primary",
 
   "tasks": {
-    "mark_primary": {
-      "tool": "pickOneMarkOne",
-      "instruction": "",
-      "generates_subjects": true,
-      "help": {
-        "file": "mark_primary"
-      },
-      "tool_config" : {
-        "displays_transcribe_button": false,
-        "options": [
-          {"type": "rectangleTool", "label": "Contenu écrit objectif, scientifique", "color": "red", "generates_subject_type": "em_record_date", "help": {"file": "m_record_date"}},
-          {"type": "rectangleTool", "label": "Contenu écrit subjectif, personnel", "color": "blue", "generates_subject_type": "em_record_number", "help":  {"file": "m_record_number"}},
-          {"type": "rectangleTool", "label": "Document additionnel", "color": "darkorange", "generates_subject_type": "em_record_mortgager", "help": {"file": "m_record_mortgager"}},
-          {"type": "rectangleTool", "label": "Contenu graphique", "color": "magenta", "generates_subject_type": "em_record_street_address", "help": {"file": "m_record_street_address"}},
-          {"type": "rectangleTool", "label": "Contenu non renseigné", "color": "teal", "generates_subject_type": "em_record_amount_loaned", "help": {"file": "m_record_amount_loaned"}},
-          {"type": "rectangleTool", "label": "Valuation", "color": "sienna", "generates_subject_type": "em_record_valuation", "help": {"file": "m_record_valuation"}},
-          {"type": "rectangleTool", "label": "Dimension & Description", "color": "purple", "generates_subject_type": "em_record_survey", "help": {"file": "m_record_survey"}}
-        ]
-      },
-      "next_task": null
+    "mark_primary":{
+        "tool": "pickOneMarkOne",
+        "instruction": "Identifier les différentes zones de contenus et marquez leur localisation sur les pages",
+        "generates_subjects": true,
+        "help": {
+            "file": "mark_primary"
+        },
+        "tool_config": {
+            "displays_transcribe_button": false,
+            "options": [
+                {
+                    "type": "rectangleTool",
+                    "label": "Description d'observation et réflexion de l'auteur sous forme de paragraphe (hypothèse, analyse, ...)",
+                    "color": "blue",
+                    "generates_subject_type": "em_descr_refl",
+                    "help": {
+                        "file": ""
+                    }
+                },
+                {
+                    "type": "rectangleTool",
+                    "label": "Date",
+                    "color": "blue",
+                    "generates_subject_type": "em_descr_date",
+                    "help": {
+                        "file": ""
+                    }
+                },
+                {
+                    "type": "rectangleTool",
+                    "label": "Un contenu plus subjectif empreint des émotions de l'auteur (citations,textes humoristiques ...)",
+                    "color": "magenta",
+                    "generates_subject_type": "em_subj_emot",
+                    "help": {
+                        "file": ""
+                    }
+                },
+                {
+                    "type": "rectangleTool",
+                    "label": "Une référence à d'autres contenus (extérieurs ou interne au carnet ...)",
+                    "color": "red",
+                    "generates_subject_type": "em_ref",
+                    "help": {
+                        "file": ""
+                    }
+                },
+                {
+                    "type": "rectangleTool",
+                    "label": "Contenu graphique (dessins, croquis, schémas ...)",
+                    "color": "orange",
+                    "generates_subject_type": "em_graph",
+                    "help": {
+                        "file": ""
+                    }
+                },
+                {
+                    "type": "rectangleTool",
+                    "label": "Des documents additionels ajouté au carnet (photographies, formulaires standardisés ...)",
+                    "color": "yellow",
+                    "generates_subject_type": "em_addit",
+                    "help": {
+                        "file": ""
+                    }
+                },
+                {
+                    "type": "rectangleTool",
+                    "label": "Contenu non catégorisé",
+                    "color": "green",
+                    "generates_subject_type": "em_uknwn",
+                    "help": {
+                        "file": ""
+                    }
+                }
+            ]
+        },
+        "next_task": null
     },
 
     "completion_assessment_task": {
