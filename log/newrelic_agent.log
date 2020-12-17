@@ -1150,3 +1150,99 @@
 [12/15/20 18:37:29 +0100 ubuntu (12215)] ERROR : Invalid license key
 [12/15/20 18:37:29 +0100 ubuntu (12215)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
 [12/15/20 18:38:00 +0100 ubuntu (12215)] INFO : Starting Agent shutdown
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Starting the New Relic agent in "development" environment.
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/17/20 14:39:55 +0100 ubuntu (4150)] WARN : No configuration file found. Working directory = /home/yulin/pred-crowdsourcing-2020
+[12/17/20 14:39:55 +0100 ubuntu (4150)] WARN : Looked in these locations (based on defaults): /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/.newrelic/newrelic.yml, /home/yulin/newrelic.yml
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Environment: development
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : No known dispatcher detected.
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Application: development
+[12/17/20 14:39:55 +0100 ubuntu (4150)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Moped instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing deferred Rack instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Rack::Builder middleware instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Net instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Rails 3+ middleware instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Rails 4 view instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Rails 4 Controller instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Installing Rails 4 Error instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Finished instrumentation
+[12/17/20 14:39:55 +0100 ubuntu (4150)] INFO : Doing deferred dependency-detection before Rack startup
+[12/17/20 14:40:04 +0100 ubuntu (4150)] ERROR : Invalid license key
+[12/17/20 14:40:04 +0100 ubuntu (4150)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/17/20 14:52:03 +0100 ubuntu (4150)] INFO : Starting Agent shutdown
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Starting the New Relic agent in "development" environment.
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/17/20 14:53:02 +0100 ubuntu (5603)] WARN : No configuration file found. Working directory = /home/yulin/pred-crowdsourcing-2020
+[12/17/20 14:53:02 +0100 ubuntu (5603)] WARN : Looked in these locations (based on defaults): /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/.newrelic/newrelic.yml, /home/yulin/newrelic.yml
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Environment: development
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : No known dispatcher detected.
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Application: development
+[12/17/20 14:53:02 +0100 ubuntu (5603)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Moped instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing deferred Rack instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Rack::Builder middleware instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Net instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Rails 3+ middleware instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Rails 4 view instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Rails 4 Controller instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Installing Rails 4 Error instrumentation
+[12/17/20 14:53:02 +0100 ubuntu (5603)] INFO : Finished instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Starting the New Relic agent in "development" environment.
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/17/20 14:53:21 +0100 ubuntu (5864)] WARN : No configuration file found. Working directory = /home/yulin/pred-crowdsourcing-2020
+[12/17/20 14:53:21 +0100 ubuntu (5864)] WARN : Looked in these locations (based on defaults): /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/.newrelic/newrelic.yml, /home/yulin/newrelic.yml
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Environment: development
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : No known dispatcher detected.
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Application: development
+[12/17/20 14:53:21 +0100 ubuntu (5864)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Moped instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing deferred Rack instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Rack::Builder middleware instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Net instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Rails 3+ middleware instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Rails 4 view instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Rails 4 Controller instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Installing Rails 4 Error instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Finished instrumentation
+[12/17/20 14:53:21 +0100 ubuntu (5864)] INFO : Doing deferred dependency-detection before Rack startup
+[12/17/20 14:53:27 +0100 ubuntu (5864)] ERROR : Invalid license key
+[12/17/20 14:53:27 +0100 ubuntu (5864)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/17/20 15:08:09 +0100 ubuntu (5864)] INFO : Starting Agent shutdown
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Starting the New Relic agent in "development" environment.
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/17/20 15:08:12 +0100 ubuntu (6320)] WARN : No configuration file found. Working directory = /home/yulin/pred-crowdsourcing-2020
+[12/17/20 15:08:12 +0100 ubuntu (6320)] WARN : Looked in these locations (based on defaults): /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/.newrelic/newrelic.yml, /home/yulin/newrelic.yml
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Environment: development
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : No known dispatcher detected.
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Application: development
+[12/17/20 15:08:12 +0100 ubuntu (6320)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Moped instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing deferred Rack instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Rack::Builder middleware instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Net instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Rails 3+ middleware instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Rails 4 view instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Rails 4 Controller instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Installing Rails 4 Error instrumentation
+[12/17/20 15:08:12 +0100 ubuntu (6320)] INFO : Finished instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Starting the New Relic agent in "development" environment.
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/17/20 15:08:31 +0100 ubuntu (6337)] WARN : No configuration file found. Working directory = /home/yulin/pred-crowdsourcing-2020
+[12/17/20 15:08:31 +0100 ubuntu (6337)] WARN : Looked in these locations (based on defaults): /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/config/newrelic.yml, /home/yulin/pred-crowdsourcing-2020/newrelic.yml, /home/yulin/.newrelic/newrelic.yml, /home/yulin/newrelic.yml
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Environment: development
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : No known dispatcher detected.
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Application: development
+[12/17/20 15:08:31 +0100 ubuntu (6337)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Moped instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing deferred Rack instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Rack::Builder middleware instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Net instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Rails 3+ middleware instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Rails 4 view instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Rails 4 Controller instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Installing Rails 4 Error instrumentation
+[12/17/20 15:08:31 +0100 ubuntu (6337)] INFO : Finished instrumentation
+[12/17/20 15:08:32 +0100 ubuntu (6337)] INFO : Doing deferred dependency-detection before Rack startup
+[12/17/20 15:09:21 +0100 ubuntu (6337)] ERROR : Invalid license key
+[12/17/20 15:09:21 +0100 ubuntu (6337)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
