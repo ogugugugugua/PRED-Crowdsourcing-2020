@@ -8,66 +8,29 @@
     "generates_subjects_max": 10,
     "generates_subjects_method": "collect-unique",
     "tasks": {
-        "em_descr_refl": {
-            "tool": "textTool",
-            "tool_config": {},
-            "instruction": "Transcrivez le contenu du cadre",
-            "examples": [],
+        "ctn_ecrit_obj": {
+            "tool": "compositeTool",
+            "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+            "generates_subjects": true,
+            "tool_config": {
+                "tools": {
+                    "transcribe_ctn_obj_sci_date": {
+                        "tool": "dateTool",
+                        "tool_config": {},
+                        "label": "Entrez la date associée à ce contenu (optionnel)",
+                        "generates_subject_type": "transcribed_ctn_obj_sci_date"
+                    },
+                    "transcribe_ctn_obj_sci_content": {
+                        "tool": "textTool",
+                        "tool_config": {},
+                        "label": "Transcrivez le contenu du texte",
+                        "generates_subject_type": "transcribed_ctn_obj_sci_content"
+                    }
+                }
+            },
             "help": {
                 "file": ""
-            },
-            "generates_subject_type": "em_transcribed_ecrit"
-        },
-        
-        "em_subj_emot": {
-            "tool": "textTool",
-            "tool_config": {},
-            "instruction": "Transcrivez le contenu du cadre",
-            "examples": [],
-            "help": {
-                "file": ""
-            },
-            "generates_subject_type": "em_transcribed_ecrit"
-        },
-        "em_subj_emot": {
-            "tool": "textTool",
-            "tool_config": {},
-            "instruction": "Transcrivez le contenu du cadre",
-            "examples": [],
-            "help": {
-                "file": ""
-            },
-            "generates_subject_type": "em_transcribed_ecrit"
-        },
-        "em_subj_emot": {
-            "tool": "textTool",
-            "tool_config": {},
-            "instruction": "Transcrivez le contenu du cadre",
-            "examples": [],
-            "help": {
-                "file": ""
-            },
-            "generates_subject_type": "em_transcribed_ecrit"
-        },
-        "em_subj_emot": {
-            "tool": "textTool",
-            "tool_config": {},
-            "instruction": "Transcrivez le contenu du cadre",
-            "examples": [],
-            "help": {
-                "file": ""
-            },
-            "generates_subject_type": "em_transcribed_ecrit"
-        },
-        "em_subj_emot": {
-            "tool": "textTool",
-            "tool_config": {},
-            "instruction": "Transcrivez le contenu du cadre",
-            "examples": [],
-            "help": {
-                "file": ""
-            },
-            "generates_subject_type": "em_transcribed_ecrit"
+            }
         }
         
     }
