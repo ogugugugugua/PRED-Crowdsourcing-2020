@@ -1,37 +1,222 @@
 {
-    "name": "transcribe",
-    "label": "Transcribe Workflow",
-    "retire_limit": 3,
-    "generates_subjects": true,
-    "generates_subjects_for": "verify",
-    "generates_subjects_after": 3,
-    "generates_subjects_max": 10,
-    "generates_subjects_method": "collect-unique",
-    "tasks": {
-        "ctn_ecrit_obj": {
-            "tool": "compositeTool",
-            "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
-            "generates_subjects": true,
-            "tool_config": {
-                "tools": {
-                    "transcribe_ctn_obj_sci_date": {
-                        "tool": "dateTool",
-                        "tool_config": {},
-                        "label": "Entrez la date associée à ce contenu (optionnel)",
-                        "generates_subject_type": "transcribed_ctn_obj_sci_date"
-                    },
-                    "transcribe_ctn_obj_sci_content": {
-                        "tool": "textTool",
-                        "tool_config": {},
-                        "label": "Transcrivez le contenu du texte",
-                        "generates_subject_type": "transcribed_ctn_obj_sci_content"
-                    }
-                }
-            },
-            "help": {
-                "file": ""
-            }
+  "name": "transcribe",
+  "label": "Transcribe Workflow",
+  "retire_limit": 3,
+  "generates_subjects": true,
+  "generates_subjects_for": "verify",
+  "generates_subjects_after": 3,
+  "generates_subjects_max": 10,
+  "generates_subjects_method": "collect-unique",
+  "tasks": {
+    "ctn_ecrit_obj": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_ecrit_obj": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_ecrit_obj"
+          }
         }
-        
+      }
+    },
+    "ctn_ecrit_refl": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_ecrit_refl": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_ecrit_refl"
+          }
+        }
+      }
+    },
+    "ctn_ecrit_subj": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_ecrit_subj": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_ecrit_subj"
+          }
+        }
+      }
+    },
+    "ctn_graph_croq_draw": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_graph_croq_draw": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_graph_croq_draw"
+          }
+        }
+      }
+    },
+    "ctn_graph_sch": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_graph_sch": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_graph_sch"
+          }
+        }
+      }
+    },
+    "ctn_graph_other": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_graph_other": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_graph_other"
+          }
+        }
+      }
+    },
+    "ctn_addit_stand": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_addit_stand": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_addit_stand"
+          }
+        }
+      }
+    },
+    "ctn_addit_photo": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_addit_photo": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_addit_photo"
+          }
+        }
+      }
+    },
+    "ctn_addit_pers": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_addit_pers": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_addit_pers"
+          }
+        }
+      }
+    },
+    "ctn_addit_other": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_addit_other": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_addit_other"
+          }
+        }
+      }
+    },
+    "ctn_annot_sci": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_annot_sci": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_annot_sci"
+          }
+        }
+      }
+    },
+    "ctn_annot_ref": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_annot_ref": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_annot_ref"
+          }
+        }
+      }
+    },
+    "ctn_annot_pers": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_annot_pers": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_annot_pers"
+          }
+        }
+      }
+    },
+    "ctn_annot_other": {
+      "tool": "compositeTool",
+      "instruction": "Transcrivez le contenu du cadre en spécifiant également certaines informations susceptibles de faciliter l'exploitation du résultat.",
+      "generates_subjects": true,
+      "tool_config": {
+        "tools": {
+          "tr_ctn_annot_other": {
+            "tool": "textTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_annot_other"
+          }
+        }
+      }
     }
+  }
 }

@@ -73,7 +73,7 @@
                         "type": "rectangleTool",
                         "label": "Autre catégorie non référencée",
                         "color": "orange",
-                        "generates_subject_type": "ctn_ecrit_subj",
+                        "generates_subject_type": "ctn_ecrit_other",
                         "help": {
                             "title": "Marquer un contenu écrit subjectif",
                             "body": "Identifiez et marquez les annotations associée à ce contenu, empreint des émotions de l'auteur ayant peu d'intérêt scientifique mais plutôt lié(citations, remarques personnelles ...)"

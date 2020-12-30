@@ -3078,3 +3078,150 @@
 [12/17/20 15:54:15 +0100 ubuntu (7502)] ERROR : Invalid license key
 [12/17/20 15:54:15 +0100 ubuntu (7502)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
 >>>>>>> 8bb710677d9b55bda22b766dfc5facd326113b03
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Starting the New Relic agent in "development" environment.
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Environment: development
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : No known dispatcher detected.
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Application: development
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Moped instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Rails 3+ middleware instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing deferred Rack instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Rack::Builder middleware instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Net instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Rails 4 Error instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Rails 4 view instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Installing Rails 4 Controller instrumentation
+[12/29/20 15:50:21 +0100 xam-virtual-machine (5451)] INFO : Finished instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Starting the New Relic agent in "development" environment.
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Environment: development
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : No known dispatcher detected.
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Application: development
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Moped instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Rails 3+ middleware instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing deferred Rack instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Rack::Builder middleware instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Net instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Rails 4 Error instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Rails 4 view instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Installing Rails 4 Controller instrumentation
+[12/29/20 15:51:17 +0100 xam-virtual-machine (5464)] INFO : Finished instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Starting the New Relic agent in "development" environment.
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Environment: development
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : No known dispatcher detected.
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Application: development
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Moped instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Rails 3+ middleware instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing deferred Rack instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Rack::Builder middleware instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Net instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Rails 4 Error instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Rails 4 view instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Installing Rails 4 Controller instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Finished instrumentation
+[12/29/20 15:51:39 +0100 xam-virtual-machine (5477)] INFO : Doing deferred dependency-detection before Rack startup
+[12/29/20 15:52:27 +0100 xam-virtual-machine (5477)] ERROR : Invalid license key
+[12/29/20 15:52:27 +0100 xam-virtual-machine (5477)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/29/20 15:54:08 +0100 xam-virtual-machine (5477)] INFO : Starting Agent shutdown
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Starting the New Relic agent in "development" environment.
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Environment: development
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : No known dispatcher detected.
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Application: development
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Moped instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Rails 3+ middleware instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing deferred Rack instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Rack::Builder middleware instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Net instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Rails 4 Error instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Rails 4 view instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Installing Rails 4 Controller instrumentation
+[12/29/20 15:54:13 +0100 xam-virtual-machine (6004)] INFO : Finished instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Starting the New Relic agent in "development" environment.
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Environment: development
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : No known dispatcher detected.
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Application: development
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Moped instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Rails 3+ middleware instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing deferred Rack instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Rack::Builder middleware instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Net instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Rails 4 Error instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Rails 4 view instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Installing Rails 4 Controller instrumentation
+[12/29/20 16:01:27 +0100 xam-virtual-machine (6135)] INFO : Finished instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Starting the New Relic agent in "development" environment.
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Environment: development
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : No known dispatcher detected.
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Application: development
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Moped instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Rails 3+ middleware instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing deferred Rack instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Rack::Builder middleware instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Net instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Rails 4 Error instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Rails 4 view instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Installing Rails 4 Controller instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Finished instrumentation
+[12/29/20 16:01:40 +0100 xam-virtual-machine (6147)] INFO : Doing deferred dependency-detection before Rack startup
+[12/29/20 16:01:44 +0100 xam-virtual-machine (6147)] ERROR : Invalid license key
+[12/29/20 16:01:44 +0100 xam-virtual-machine (6147)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] INFO : Starting the New Relic agent in "development" environment.
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] INFO : Environment: development
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] INFO : No known dispatcher detected.
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] INFO : Application: development
+[12/30/20 16:07:04 +0100 xam-virtual-machine (5438)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Moped instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Rails 3+ middleware instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing deferred Rack instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Rack::Builder middleware instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Net instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Rails 4 Error instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Rails 4 view instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Installing Rails 4 Controller instrumentation
+[12/30/20 16:07:05 +0100 xam-virtual-machine (5438)] INFO : Finished instrumentation
+[12/30/20 16:07:36 +0100 xam-virtual-machine (5515)] INFO : Starting the New Relic agent in "development" environment.
+[12/30/20 16:07:36 +0100 xam-virtual-machine (5515)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/30/20 16:07:36 +0100 xam-virtual-machine (5515)] WARN : No configuration file found. Working directory = /home/xam/Desktop/PRED/pred-crowdsourcing-2020
+[12/30/20 16:07:36 +0100 xam-virtual-machine (5515)] WARN : Looked in these locations (based on defaults): /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/config/newrelic.yml, /home/xam/Desktop/PRED/pred-crowdsourcing-2020/newrelic.yml, /home/xam/.newrelic/newrelic.yml, /home/xam/newrelic.yml
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Environment: development
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : No known dispatcher detected.
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Application: development
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Moped instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Rails 3+ middleware instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing deferred Rack instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Rack::Builder middleware instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Net instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Rails 4 Error instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Rails 4 view instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Installing Rails 4 Controller instrumentation
+[12/30/20 16:07:37 +0100 xam-virtual-machine (5515)] INFO : Finished instrumentation
+[12/30/20 16:07:38 +0100 xam-virtual-machine (5515)] INFO : Doing deferred dependency-detection before Rack startup
+[12/30/20 16:08:28 +0100 xam-virtual-machine (5515)] ERROR : Invalid license key
+[12/30/20 16:08:28 +0100 xam-virtual-machine (5515)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/30/20 16:14:57 +0100 xam-virtual-machine (5515)] INFO : Starting Agent shutdown
