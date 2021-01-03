@@ -1,95 +1,268 @@
 {
-  "name":"mark",
-  "label":"Mark Workflow",
-  "subject_fetch_limit":"10",
-  "generates_subjects": true,
-  "generates_subjects_for": "transcribe",
-
-  "first_task":"mark_primary",
-
-  "tasks": {
-    "mark_primary":{
-        "tool": "pickOneMarkOne",
-        "instruction": "Identifier les différentes zones de contenus et marquez leur localisation sur les pages",
-        "generates_subjects": true,
-        "help": {
-            "file": "mark_primary"
+    "name": "mark",
+    "label": "Mark Workflow",
+    "subject_fetch_limit": "10",
+    "generates_subjects": true,
+    "generates_subjects_after": 1,
+    "generates_subjects_for": "transcribe",
+    "first_task": "pick_ctn_ecrit",
+    "tasks": {
+        "pick_ctn_ecrit": {
+            "tool": "pickOne",
+            "instruction": "Identifiez-vous du *contenu écrit structuré* sur cette page ?",
+            "help": {
+                "title": "",
+                "body": ""
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "value": "yes",
+                        "label": "Oui",
+                        "next_task": "mark_ctn_ecrit"
+                    },
+                    {
+                        "value": "no",
+                        "label": "Non"
+                    }
+                ]
+            },
+            "next_task": "pick_ctn_graph"
         },
-        "tool_config": {
-            "displays_transcribe_button": false,
-            "options": [
-                {
-                    "type": "rectangleTool",
-                    "label": "Description d'observation et réflexion de l'auteur sous forme de paragraphe (hypothèse, analyse, ...)",
-                    "color": "blue",
-                    "generates_subject_type": "em_descr_refl",
-                    "help": {
-                        "file": ""
+        "mark_ctn_ecrit": {
+            "tool": "pickOneMarkOne",
+            "instruction": "Identifiez et transcrivez les zones associées aux contenus textes écrits des catégories suivantes (si elles sont présentes)",
+            "generates_subjects": true,
+            "help": {
+                "title": "test",
+                "body": "test"
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "type": "rectangleTool",
+                        "label": "Contenu à pertinence scientifique, objectif",
+                        "color": "blue",
+                        "generates_subject_type": "ctn_ecrit_obj",
+                        "help": {
+                            "title": "Marquer un contenu de type scientifique",
+                            "body": "Marquez le contenu écrit contenant des informations factuelles, scientifiques comme des textes contenant des descriptions de découvertes, des remarques sur l'état des fouilles, des analyses scientifiques ..."
+                        }
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Contenu associé aux réflexions, hypothèses de l'auteur",
+                        "color": "red",
+                        "generates_subject_type": "ctn_ecrit_refl",
+                        "help": {
+                            "title": "Marquer un contenu de type scientifique",
+                            "body": "Marquez le contenu écrit contenant des réflexions, hypothèses de l'auteur permettant par exemple de suivre l'avancé des fouilles et ainsi de la progression de l'équipe"
+                        }
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Contenu plus personnel, subjectif",
+                        "color": "green",
+                        "generates_subject_type": "ctn_ecrit_subj",
+                        "help": {
+                            "title": "Marquer un contenu écrit subjectif",
+                            "body": "Identifiez et marquez un contenu empreint plutôt empreint des émotions de l'auteur, ayant peu d'intérêt scientifique mais pouvant donner plus d'information sur les pratiques de l'auteur, l'ambiance de l'équipe, ..."
+                        }
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Autre catégorie non référencée",
+                        "color": "orange",
+                        "generates_subject_type": "ctn_ecrit_other",
+                        "help": {
+                            "title": "Marquer un contenu écrit subjectif",
+                            "body": "Identifiez et marquez les annotations associée à ce contenu, empreint des émotions de l'auteur ayant peu d'intérêt scientifique mais plutôt lié(citations, remarques personnelles ...)"
+                        }
                     }
-                },
-                {
-                    "type": "rectangleTool",
-                    "label": "Date",
-                    "color": "blue",
-                    "generates_subject_type": "em_descr_date",
-                    "help": {
-                        "file": ""
-                    }
-                },
-                {
-                    "type": "rectangleTool",
-                    "label": "Un contenu plus subjectif empreint des émotions de l'auteur (citations,textes humoristiques ...)",
-                    "color": "magenta",
-                    "generates_subject_type": "em_subj_emot",
-                    "help": {
-                        "file": ""
-                    }
-                },
-                {
-                    "type": "rectangleTool",
-                    "label": "Une référence à d'autres contenus (extérieurs ou interne au carnet ...)",
-                    "color": "red",
-                    "generates_subject_type": "em_ref",
-                    "help": {
-                        "file": ""
-                    }
-                },
-                {
-                    "type": "rectangleTool",
-                    "label": "Contenu graphique (dessins, croquis, schémas ...)",
-                    "color": "orange",
-                    "generates_subject_type": "em_graph",
-                    "help": {
-                        "file": ""
-                    }
-                },
-                {
-                    "type": "rectangleTool",
-                    "label": "Des documents additionels ajouté au carnet (photographies, formulaires standardisés ...)",
-                    "color": "yellow",
-                    "generates_subject_type": "em_addit",
-                    "help": {
-                        "file": ""
-                    }
-                },
-                {
-                    "type": "rectangleTool",
-                    "label": "Contenu non catégorisé",
-                    "color": "green",
-                    "generates_subject_type": "em_uknwn",
-                    "help": {
-                        "file": ""
-                    }
-                }
-            ]
+                ]
+            },
+            "next_task": "pick_ctn_graph"
         },
-        "next_task": null
-    },
+        "pick_ctn_graph": {
+            "tool": "pickOne",
+            "instruction": "Identifiez-vous du contenu de type graphique sur cette page ?",
+            "help": {
+                "title": "",
+                "body": ""
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "value": "yes",
+                        "label": "Oui",
+                        "next_task": "mark_ctn_graph"
+                    },
+                    {
+                        "value": "no",
+                        "label": "Non"
+                    }
+                ]
+            },
+            "next_task": "pick_ctn_addit"
+        },
+        "mark_ctn_graph": {
+            "tool": "pickOneMarkOne",
+            "instruction": "Identifiez et transcrivez les zones associées aux contenus graphiques des catégories suivantes (si elles sont présentes)",
+            "help": {
+                "title": "",
+                "body": ""
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "type": "rectangleTool",
+                        "label": "Croquis/Dessin d'observation",
+                        "color": "blue",
+                        "generates_subject_type": "ctn_graph_croq_draw"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Schéma",
+                        "color": "red",
+                        "generates_subject_type": "ctn_graph_sch"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "color": "orange",
+                        "label": "Autre catégorie",
+                        "generates_subject_type": "ctn_graph_other"
+                    }
+                ]
+            },
+            "next_task":"pick_ctn_addit"
+        },
+        
+        "pick_ctn_addit": {
+            "tool": "pickOne",
+            "instruction": "Identifiez-vous des documents additionnels sur cette page ?",
+            "help": {
+                "title": "Documents additionnels",
+                "body": "Le contenu additionnel fait référence à des documents ajouté (scotché, collé, ...) au carnet aussi bien au cours des fouilles qu'à postoriori. "
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "value": "yes",
+                        "label": "Oui",
+                        "next_task": "mark_ctn_addit"
+                    },
+                    {
+                        "value": "no",
+                        "label": "Non"
+                    }
+                ]
+            },
+            "next_task": "pick_ctn_annot"
+        },
 
-    "completion_assessment_task": {
-      "tool_config": {
-        "displays_transcribe_button": false
-      }
+        "mark_ctn_addit":{
+            "tool": "pickOneMarkOne",
+            "instruction": "Identifiez et transcrivez les zones associées aux contenus additionnels des catégories suivantes (si elles sont présentes)",
+            "help": {
+                "title": "",
+                "body": ""
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "type": "rectangleTool",
+                        "label": "Document standardisé à pertinence scientifique",
+                        "color": "blue",
+                        "generates_subject_type": "ctn_addit_stand"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Photographie de terrain",
+                        "color": "red",
+                        "generates_subject_type": "ctn_addit_photo"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Document plus personnel",
+                        "color": "green",
+                        "generates_subject_type": "ctn_addit_pers"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "label": "Autre catégorie",
+                        "color":"orange",
+                        "generates_subject_type": "ctn_addit_other"
+                    }
+                ]
+            },
+            "next_task": "pick_ctn_annot"
+        },
+
+        "pick_ctn_annot": {
+            "tool": "pickOne",
+            "instruction": "Identifiez-vous des annotations ou autre informations complémentaires sur cette page ?",
+            "help": {
+                "title": "Annotations",
+                "body": "Les annotations et autres informations complémentaires contribuent à l'évolution du contenu d'un carnet et ainsi sa complexité de transcription."
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "value": "yes",
+                        "label": "Oui",
+                        "next_task": "mark_ctn_annot"
+                    },
+                    {
+                        "value": "no",
+                        "label": "Non"
+                    }
+                ]
+            },
+            "next_task": null
+        },
+
+        "mark_ctn_annot":{
+            "tool": "pickOneMarkOne",
+            "instruction": "Identifiez et transcrivez les zones associées à des annotations des catégories suivantes (si elles sont présentes)",
+            "help": {
+                "title": "",
+                "body": ""
+            },
+            "tool_config": {
+                "options": [
+                    {
+                        "type": "rectangleTool",
+                        "color": "blue",
+                        "label": "Informations complémentaires de type textuel",
+                        "generates_subject_type": "ctn_annot_sci"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "color": "red",
+                        "label": "Références",
+                        "generates_subject_type": "ctn_annot_ref"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "color": "green",
+                        "label": "Annotation personnelle, subjective",
+                        "generates_subject_type": "ctn_annot_pers"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "color": "orange",
+                        "label": "Information complémentaires de type graphique",
+                        "generates_subject_type": "ctn_annot_sci"
+                    },
+                    {
+                        "type": "rectangleTool",
+                        "color": "yellow",
+                        "label": "Autre type d'annotation",
+                        "generates_subject_type": "ctn_annot_other"
+                    }
+                ]
+            },
+            "next_task": "null"
+        }
     }
-  }
 }
