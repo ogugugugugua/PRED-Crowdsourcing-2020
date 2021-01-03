@@ -15,10 +15,16 @@
       "tool_config": {
         "tools": {
           "tr_ctn_ecrit_obj": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_ecrit_obj"
+          },
+          "tr_ctn_ecrit_obj_date": {
+            "tool": "dateTool",
+            "tool_config": {},
+            "label": "Transcrivez le contenu du cadre",
+            "generates_subject_type": "transcribed_ctn_ecrit_obj_date"
           }
         }
       }
@@ -30,7 +36,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_ecrit_refl": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_ecrit_refl"
@@ -45,7 +51,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_ecrit_subj": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_ecrit_subj"
@@ -60,7 +66,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_graph_croq_draw": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_graph_croq_draw"
@@ -75,7 +81,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_graph_sch": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_graph_sch"
@@ -90,7 +96,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_graph_other": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_graph_other"
@@ -105,7 +111,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_addit_stand": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_addit_stand"
@@ -120,7 +126,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_addit_photo": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_addit_photo"
@@ -135,7 +141,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_addit_pers": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_addit_pers"
@@ -150,7 +156,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_addit_other": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_addit_other"
@@ -165,7 +171,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_annot_sci": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_annot_sci"
@@ -180,7 +186,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_annot_ref": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_annot_ref"
@@ -195,7 +201,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_annot_pers": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_annot_pers"
@@ -210,7 +216,7 @@
       "tool_config": {
         "tools": {
           "tr_ctn_annot_other": {
-            "tool": "textTool",
+            "tool": "textAreaTool",
             "tool_config": {},
             "label": "Transcrivez le contenu du cadre",
             "generates_subject_type": "transcribed_ctn_annot_other"

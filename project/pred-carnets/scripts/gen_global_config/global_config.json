@@ -1,0 +1,182 @@
+{
+    "stepsCfg": [
+        {
+            "name": "mark",
+            "label": "Mark Workflow",
+            "subject_fetch_limit": "10",
+            "generates_subjects": true,
+            "generates_subjects_after": 1,
+            "generates_subjects_for": "transcribe",
+            "first_task": "pick_ctn_ecrit",
+            "instruction_mark": "Identifiez et transcrivez les zones associées aux contenus ##subtype_ctn## des catégories suivantes (si elles sont présentes)",
+            "instruction_pick" : "Identifiez-vous du contenu de type ##type_ctn## sur cette page ?"
+        },
+        {
+            "name": "transcribe",
+            "label": "Transcribe Workflow",
+            "retire_limit": 3,
+            "generates_subjects": true,
+            "generates_subjects_for": "verify",
+            "generates_subjects_after": 3,
+            "generates_subjects_max": 10,
+            "generates_subjects_method": "collect-unique"
+        },
+        {
+            "name": "verify",
+            "label": "Verify Workflow",
+            "retire_limit": 3,
+            "generates_subjects": true,
+            "generates_subjects_method": "most-popular",
+            "generates_subjects_after": 3,
+            "generates_subjects_max": 20,
+            "generates_subjects_agreement": 0.75,
+            "subjects_classifiable_by_creator": false            
+        }
+    ],
+
+    "subjects":[
+        {
+                "name":"ctn_ecrit",
+                "label":"Contenu écrit manuscrit",
+                "description":"",
+                "categories":[
+                        {  
+                            "name":"sci_obj",
+                            "label": "Contenu à pertinence scientifique, objectif",
+                            "description": "Contenu écrit contenant des informations factuelles, scientifiques comme des textes contenant des descriptions de découvertes, des remarques sur l'état des fouilles, des analyses scientifiques ...",
+                            "supp_elements":[
+                                {
+                                    "name": "date",
+                                    "label": "Date" ,
+                                    "description": "Date de rédaction associée au contenu",
+                                    "examples": ["02/05/1975","02/06/1985"],
+                                    "optional": true,
+                                    "toVerify": false,
+                                    "toolType": "dateTool"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"refl_hyp",
+                            "label": "Contenu associé aux réflexions, hypothèses de l'auteur",
+                            "description": "Contenu écrit contenant des réflexions, hypothèses de l'auteur permettant par exemple de suivre l'avancé des fouilles et ainsi de la progression de l'équipe",
+                            "supp_elements":[]
+                        },
+                        {
+                            "name":"subj_pers",
+                            "label": "Contenu plus personnel, subjectif",
+                            "description": "Contenu écrit empreint  des émotions de l'auteur, ayant peu d'intérêt scientifique mais pouvant donner plus d'information sur les pratiques de l'auteur, l'ambiance de l'équipe, ...",
+                            "supp_elements": []
+                        },
+                        {
+                            "name":"other",
+                            "label": "Autre catégorie non référencée",
+                            "description": "Contenu écrit non référencé dans les choix ci-dessus.",
+                            "supp_elements": []
+                        }
+                    ]
+        },
+        {
+                "name":"ctn_graph",
+                "label":"Contenu graphique manuscrit",
+                "description":"",
+                "categories":[
+                    {
+                        "name":"croq_draw",
+                        "label": "Croquis/Dessin d'observation",
+                        "supp_elements": [
+                            {
+                                "name": "title",
+                                "label": "Titre",
+                                "description": "",
+                                "optional": true,
+                                "toolType": "textTool"},
+                            {
+                                "name": "legend_comm",
+                                "label": "Légende et commentaires",
+                                "description": "",
+                                "optional": true,
+                                "toolType": "textTool"},
+                            {
+                                "name": "date",
+                                "label": "Date",
+                                "description": "",
+                                "optional": true,
+                                "toolType": "dateTool"
+                            }
+                        ]
+                    },
+                    {
+                        "name":"schema",
+                        "label": "Schéma",
+                        "supp_elements": []
+                    },
+                    {
+                        "name":"other",
+                        "label": "Catégorie non référencée",
+                        "supp_elements": []
+                    }
+                ]
+        },
+        {
+                "name":"ctn_addit",
+                "label":"Document additionnel",
+                "description":"Le contenu additionnel fait référence à des documents ajouté (scotché, collé, ...) au carnet aussi bien au cours des fouilles qu'à postoriori.",
+                "categories":[
+                        {
+                            "name":"stand_sci",
+                            "label": "Document standardisé à pertinence scientifique",
+                            "supp_elements": []
+                        },
+                        {
+                            "name":"photo",
+                            "label": "Photographie de terrain",
+                            "supp_elements": []
+                        },
+                        {
+                            "name":"pers",
+                            "label": "Document plus personnel",
+                            "supp_elements": []
+                        },
+                        {
+                            "name":"other",
+                            "label": "Catégorie non référencée",
+                            "supp_elements": []
+                        }   
+                ]
+
+        },
+        {
+            "name":"ctn_annot",
+            "label":"Annotations et information complémentaire",
+            "description":"Les annotations et autres informations complémentaires contribuent à l'évolution du contenu d'un carnet et ainsi sa complexité de transcription.",
+            "categories":[
+                {
+                    "name":"obj_sci",
+                    "label": "Informations complémentaires de type textuel",
+                    "supp_elements": []
+                },
+                {
+                    "name":"ref",
+                    "label": "Références",
+                    "supp_elements": []
+                },
+                {
+                    "name":"pers",
+                    "label": "Annotation personnelle, subjective",
+                    "supp_elements": []
+                },
+                {
+                    "name":"sci",
+                    "label": "Information complémentaires de type graphique",
+                    "supp_elements": []
+                },
+                {
+                    "name":"other",
+                    "label": "Autre type d'annotation",
+                    "supp_elements": []
+                }
+            ]
+        }
+    ]
+}
