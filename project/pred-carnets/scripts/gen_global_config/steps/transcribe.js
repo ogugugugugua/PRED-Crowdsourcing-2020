@@ -38,7 +38,7 @@ Cas composite tool
 
 module.exports = function(config,subjects){
     console.log("Transcribe config generated!");
-    
+     
     var json = config;
     var tasks = {};
     var eachTask = {};
@@ -80,7 +80,7 @@ module.exports = function(config,subjects){
     const data = JSON.stringify(json, null, 4);
 
     // write JSON string to a file
-    fs.writeFile('test_transcribe.json', data, (err) => {
+    fs.writeFile('output/test_transcribe.json', data, (err) => {
         if (err) {
             throw err;
         }

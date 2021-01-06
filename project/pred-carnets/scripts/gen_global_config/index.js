@@ -14,5 +14,5 @@
 const fs = require('fs');
 const globalConfig = require('./global_config.json');
 
-
 (() => globalConfig.stepsCfg.forEach((step) => require('./steps/'+step.name+'.js')(step,globalConfig.subjects)))();
+                                                            
