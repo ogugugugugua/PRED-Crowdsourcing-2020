@@ -1,0 +1,189 @@
+{
+  "name": "verify",
+  "label": "Verify Workflow",
+  "retire_limit": 3,
+  "generates_subjects": true,
+  "generates_subjects_method": "most-popular",
+  "generates_subjects_after": 3,
+  "generates_subjects_max": 20,
+  "generates_subjects_agreement": 0.75,
+  "subjects_classifiable_by_creator": false,
+  "tasks": {
+    "transcribed_tr_ctn_ecrit_sci_obj": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_ecrit_sci_obj"
+    },
+    "transcribed_tr_ctn_ecrit_refl_hyp": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_ecrit_refl_hyp"
+    },
+    "transcribed_tr_ctn_ecrit_subj_pers": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_ecrit_subj_pers"
+    },
+    "transcribed_tr_ctn_ecrit_other": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_ecrit_other"
+    },
+    "transcribed_tr_ctn_graph_croq_draw": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_graph_croq_draw"
+    },
+    "transcribed_tr_ctn_graph_schema": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_graph_schema"
+    },
+    "transcribed_tr_ctn_graph_other": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_graph_other"
+    },
+    "transcribed_tr_ctn_addit_stand_sci": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_addit_stand_sci"
+    },
+    "transcribed_tr_ctn_addit_photo": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_addit_photo"
+    },
+    "transcribed_tr_ctn_addit_pers": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_addit_pers"
+    },
+    "transcribed_tr_ctn_addit_other": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_addit_other"
+    },
+    "transcribed_tr_ctn_annot_obj_sci": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_annot_obj_sci"
+    },
+    "transcribed_tr_ctn_annot_ref": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_annot_ref"
+    },
+    "transcribed_tr_ctn_annot_pers": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_annot_pers"
+    },
+    "transcribed_tr_ctn_annot_sci": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_annot_sci"
+    },
+    "transcribed_tr_ctn_annot_other": {
+      "instruction": "Choisissez la meilleure transcription ou entrez la vôtre!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": ""
+      },
+      "generates_subject_type": "consensus_tr_ctn_annot_other"
+    }
+  }
+}
