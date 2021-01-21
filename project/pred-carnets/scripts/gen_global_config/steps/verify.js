@@ -1,38 +1,53 @@
+"use strict";
 const fs = require('fs');
-const { strFormat } = require('./utils/utils');
+const strFormat = require('./utils/utils');
 const _ = require('lodash');
 
 module.exports = function (config, subjects) {
   
   let verifyConfig = _.clone(config);
   let verifyTasks = {};
+  let helpFiles = [];
 
   for(let i = 0; i < subjects.length; i++){
     for(let j = 0; j < subjects[i].categories.length; j++){
-      let suppElts = subjects[i].categories[j].supp_elements;
-      let name = `tr_${subjects[i].name}_${subjects[i].categories[j].name}`
-      verifyTasks[`transcribed_${name}`] = {
-        instruction: config.instructions,
-        tool: "verifyTool",
-        tool_config: {
-          "displays_transcribe_button": true
-        },
-        help: { "file": "" },
-        generates_subject_type: "consensus_" + name
-      }
+      let suppElts = subjects[i].categories[j].structure;
+      
 
-      for (let k = 0; k < subjects[i].categories[j].supp_elements.length; k++){
-        if (!subjects[i].categories[j].supp_elements[k].toVerify) continue;
-        let speName = name + '_' + subjects[i].categories[j].supp_elements[k]
+        let name = `${subjects[i].name}_${subjects[i].categories[j].name}_content`;
+        let helpObjCont = {
+          fileName : 'pc_vf_'+name+'.md',
+          content: `#Comment vérifier le contenu principal de la catégorie *${subjects[i].categories[j].label} ?\n<p>...</p>`
+        };
+
+        verifyTasks[`transcribed_${name}+'_content`] = {
+          instruction: config.instructions,
+          tool: "verifyTool",
+          tool_config: {
+            "displays_transcribe_button": true
+          },
+          help: { "file": helpObjCont.fileName.split('.')[0] },
+          generates_subject_type: "consensus_" + name
+        };
+        helpFiles.push(helpObjCont);
+
+      for (let k = 0; k < subjects[i].categories[j].structure.length; k++){
+        if (!subjects[i].categories[j].structure[k].toVerify) continue;
+        let helpObjStruct = {
+          fileName : 'pc_vf_'+speName+'.md',
+          content: `#Comment vérifier la transcription du sous-contenu *${subjects[i].categories[j].structure[k].label} ?\n<p>...</p>`
+        };
+        let speName = name + '_' + subjects[i].categories[j].structure[k]
         verifyTasks[`transcribed_${speName}`] = {
-            instruction: config.instructions,
+            instruction: config.instructions['verify'],
             tool: "verifyTool",
             tool_config: {
               "displays_transcribe_button": true
             },
-            help: { "file": "" },
+            help:{file:helpObjStruct.fileName.split('.')[0]},
             generates_subject_type: "consensus_" + speName
-          }
+          };
+          helpFiles.push(helpObjStruct);
       }
     }
   }
@@ -46,6 +61,7 @@ module.exports = function (config, subjects) {
     })
 
   fs.writeFileSync('./output/'+config.name+'.json', JSON.stringify(globalVerifyConfig,null,2));
+  helpFiles.forEach((file) => fs.writeFileSync('./../../content/help/'+file.fileName, file.content));
 
-  console.log("Verify config file generated");
+  console.log("Verify config and help files generated");
 }

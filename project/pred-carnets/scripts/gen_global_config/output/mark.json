@@ -5,20 +5,20 @@
   "generates_subjects": true,
   "generates_subjects_after": 1,
   "generates_subjects_for": "transcribe",
-  "first_task": "pick_ctn_ecrit",
+  "first_task": "pk_ctn_ecrit",
   "tasks": {
-    "pick_ctn_ecrit": {
-      "instruction": "Identifiez-vous du contenu de type **Contenu écrit manuscrit** sur cette page ?",
+    "pk_ctn_ecrit": {
+      "instruction": "Identifiez-vous du contenu de type **Zone de texte autonome (principale)** sur cette page ?",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pick_ctn_ecrit.md"
+        "file": "pc_pk_ctn_ecrit"
       },
       "tool_config": {
         "options": [
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mark_ctn_ecrit"
+            "next_task": "mk_ctn_ecrit"
           },
           {
             "value": "no",
@@ -26,73 +26,60 @@
           }
         ]
       },
-      "next_task": "pick_ctn_graph"
+      "next_task": "pk_ctn_graph"
     },
-    "mark_ctn_ecrit": {
-      "instruction": "",
+    "mk_ctn_ecrit": {
+      "instruction": "Identifiez et marquez les zones associées aux contenus de type **Zone de texte autonome (principale)** des catégories suivantes (si elles sont présentes)",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
         "options": [
           {
             "type": "rectangleTool",
-            "label": "Contenu à pertinence scientifique, objectif",
-            "color": "#29cad8",
-            "generates_subject_type": "ctn_ecrit_sci_obj",
+            "label": "Observation, description, interprétation",
+            "color": "#0f9b3b",
+            "generates_subject_type": "ctn_ecrit_obs_desc_inter",
             "help": {
-              "title": "Marquer un contenu de type Contenu écrit contenant des informations factuelles, scientifiques comme des textes contenant des descriptions de découvertes, des remarques sur l'état des fouilles, des analyses scientifiques ...",
-              "body": "Contenu écrit contenant des informations factuelles, scientifiques comme des textes contenant des descriptions de découvertes, des remarques sur l'état des fouilles, des analyses scientifiques ..."
+              "file": "pc_cat_ctn_ecrit_obs_desc_inter"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Contenu associé aux réflexions, hypothèses de l'auteur",
-            "color": "#7bea0b",
-            "generates_subject_type": "ctn_ecrit_refl_hyp",
+            "label": "Commentaires",
+            "color": "#46fc19",
+            "generates_subject_type": "ctn_ecrit_comm",
             "help": {
-              "title": "Marquer un contenu de type Contenu écrit contenant des réflexions, hypothèses de l'auteur permettant par exemple de suivre l'avancé des fouilles et ainsi de la progression de l'équipe",
-              "body": "Contenu écrit contenant des réflexions, hypothèses de l'auteur permettant par exemple de suivre l'avancé des fouilles et ainsi de la progression de l'équipe"
+              "file": "pc_cat_ctn_ecrit_comm"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Contenu plus personnel, subjectif",
-            "color": "#abed93",
-            "generates_subject_type": "ctn_ecrit_subj_pers",
-            "help": {
-              "title": "Marquer un contenu de type Contenu écrit empreint  des émotions de l'auteur, ayant peu d'intérêt scientifique mais pouvant donner plus d'information sur les pratiques de l'auteur, l'ambiance de l'équipe, ...",
-              "body": "Contenu écrit empreint  des émotions de l'auteur, ayant peu d'intérêt scientifique mais pouvant donner plus d'information sur les pratiques de l'auteur, l'ambiance de l'équipe, ..."
-            }
-          },
-          {
-            "type": "rectangleTool",
-            "label": "Autre catégorie non référencée",
-            "color": "#f9f490",
+            "label": "Autre catégorie",
+            "color": "#e6ffa3",
             "generates_subject_type": "ctn_ecrit_other",
             "help": {
-              "title": "Marquer un contenu de type Contenu écrit non référencé dans les choix ci-dessus.",
-              "body": "Contenu écrit non référencé dans les choix ci-dessus."
+              "file": "pc_cat_ctn_ecrit_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mark_ctn_ecrit.md"
+        "file": "pc_mk_ctn_ecrit"
       },
-      "next_task": "pick_ctn_graph"
+      "next_task": "pk_ctn_graph"
     },
-    "pick_ctn_graph": {
-      "instruction": "Identifiez-vous du contenu de type **Contenu graphique manuscrit** sur cette page ?",
+    "pk_ctn_graph": {
+      "instruction": "Identifiez-vous du contenu de type **Zone graphique** sur cette page ?",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pick_ctn_graph.md"
+        "file": "pc_pk_ctn_graph"
       },
       "tool_config": {
         "options": [
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mark_ctn_graph"
+            "next_task": "mk_ctn_graph"
           },
           {
             "value": "no",
@@ -100,63 +87,60 @@
           }
         ]
       },
-      "next_task": "pick_ctn_addit"
+      "next_task": "pk_ctn_imp"
     },
-    "mark_ctn_graph": {
-      "instruction": "",
+    "mk_ctn_graph": {
+      "instruction": "Identifiez et marquez les zones associées aux contenus de type **Zone graphique** des catégories suivantes (si elles sont présentes)",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
         "options": [
           {
             "type": "rectangleTool",
-            "label": "Croquis/Dessin d'observation",
-            "color": "#f78967",
-            "generates_subject_type": "ctn_graph_croq_draw",
+            "label": "Relevé",
+            "color": "#4af982",
+            "generates_subject_type": "ctn_graph_releve",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_graph_releve"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Schéma",
-            "color": "#44dd4e",
-            "generates_subject_type": "ctn_graph_schema",
+            "label": "Croquis,Dessin,Schéma",
+            "color": "#24e595",
+            "generates_subject_type": "ctn_graph_croquis_dessin_schema",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_graph_croquis_dessin_schema"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Catégorie non référencée",
-            "color": "#699918",
+            "color": "#0d37aa",
             "generates_subject_type": "ctn_graph_other",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_graph_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mark_ctn_graph.md"
+        "file": "pc_mk_ctn_graph"
       },
-      "next_task": "pick_ctn_addit"
+      "next_task": "pk_ctn_imp"
     },
-    "pick_ctn_addit": {
-      "instruction": "Identifiez-vous du contenu de type **Document additionnel** sur cette page ?",
+    "pk_ctn_imp": {
+      "instruction": "Identifiez-vous du contenu de type **Objet importé** sur cette page ?",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pick_ctn_addit.md"
+        "file": "pc_pk_ctn_imp"
       },
       "tool_config": {
         "options": [
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mark_ctn_addit"
+            "next_task": "mk_ctn_imp"
           },
           {
             "value": "no",
@@ -164,73 +148,69 @@
           }
         ]
       },
-      "next_task": "pick_ctn_annot"
+      "next_task": "pk_ctn_assoc"
     },
-    "mark_ctn_addit": {
-      "instruction": "",
+    "mk_ctn_imp": {
+      "instruction": "Identifiez et marquez les zones associées aux contenus de type **Objet importé** des catégories suivantes (si elles sont présentes)",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
         "options": [
           {
             "type": "rectangleTool",
-            "label": "Document standardisé à pertinence scientifique",
-            "color": "#4cdb04",
-            "generates_subject_type": "ctn_addit_stand_sci",
+            "label": "Formulaire d'enregistrement",
+            "color": "#b613d3",
+            "generates_subject_type": "ctn_imp_form_enr",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_imp_form_enr"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Photographie de terrain",
-            "color": "#83efe1",
-            "generates_subject_type": "ctn_addit_photo",
+            "label": "Photographie",
+            "color": "#17a834",
+            "generates_subject_type": "ctn_imp_photo",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_imp_photo"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Document plus personnel",
-            "color": "#ff2dbc",
-            "generates_subject_type": "ctn_addit_pers",
+            "label": "Objet graphique importé",
+            "color": "#96a0ff",
+            "generates_subject_type": "ctn_imp_graph_imp",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_imp_graph_imp"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Catégorie non référencée",
-            "color": "#3946ce",
-            "generates_subject_type": "ctn_addit_other",
+            "label": "Autre catégorie",
+            "color": "#ed8f87",
+            "generates_subject_type": "ctn_imp_other",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_imp_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mark_ctn_addit.md"
+        "file": "pc_mk_ctn_imp"
       },
-      "next_task": "pick_ctn_annot"
+      "next_task": "pk_ctn_assoc"
     },
-    "pick_ctn_annot": {
-      "instruction": "Identifiez-vous du contenu de type **Annotations et information complémentaire** sur cette page ?",
+    "pk_ctn_assoc": {
+      "instruction": "Identifiez-vous du contenu de type **Zone de texte associé** sur cette page ?",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pick_ctn_annot.md"
+        "file": "pc_pk_ctn_assoc"
       },
       "tool_config": {
         "options": [
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mark_ctn_annot"
+            "next_task": "mk_ctn_assoc"
           },
           {
             "value": "no",
@@ -240,66 +220,52 @@
       },
       "next_task": null
     },
-    "mark_ctn_annot": {
-      "instruction": "",
+    "mk_ctn_assoc": {
+      "instruction": "Identifiez et marquez les zones associées aux contenus de type **Zone de texte associé** des catégories suivantes (si elles sont présentes)",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
         "options": [
           {
             "type": "rectangleTool",
-            "label": "Informations complémentaires de type textuel",
-            "color": "#01c185",
-            "generates_subject_type": "ctn_annot_obj_sci",
-            "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
-            }
-          },
-          {
-            "type": "rectangleTool",
             "label": "Références",
-            "color": "#fcc4fb",
-            "generates_subject_type": "ctn_annot_ref",
+            "color": "#ea83cd",
+            "generates_subject_type": "ctn_assoc_ref",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_assoc_ref"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Annotation personnelle, subjective",
-            "color": "#d6cb37",
-            "generates_subject_type": "ctn_annot_pers",
+            "label": "Annotation scientifique",
+            "color": "#ad2ce0",
+            "generates_subject_type": "ctn_assoc_sci",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_assoc_sci"
             }
           },
           {
             "type": "rectangleTool",
-            "label": "Information complémentaires de type graphique",
-            "color": "#38c18f",
-            "generates_subject_type": "ctn_annot_sci",
+            "label": "Trait d'humeur et d'humour",
+            "color": "#e5bd7e",
+            "generates_subject_type": "ctn_assoc_hum",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_assoc_hum"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Autre type d'annotation",
-            "color": "#6bf7ff",
-            "generates_subject_type": "ctn_annot_other",
+            "color": "#d2ffa5",
+            "generates_subject_type": "ctn_assoc_other",
             "help": {
-              "title": "Marquer un contenu de type Nope",
-              "body": ""
+              "file": "pc_cat_ctn_assoc_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mark_ctn_annot.md"
+        "file": "pc_mk_ctn_assoc"
       },
       "next_task": null
     }

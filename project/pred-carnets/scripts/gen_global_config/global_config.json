@@ -7,10 +7,10 @@
             "generates_subjects": true,
             "generates_subjects_after": 1,
             "generates_subjects_for": "transcribe",
-            "first_task": "pick_ctn_ecrit",
+            "first_task": "pk_ctn_ecrit",
             "instructions": {
                 "pick": "Identifiez-vous du contenu de type **{subject}** sur cette page ?",
-                "mark": "Identifiez et transcrivez les zones associées aux contenus de type **{subject}** des catégories suivantes (si elles sont présentes)"
+                "mark": "Identifiez et marquez les zones associées aux contenus de type **{subject}** des catégories suivantes (si elles sont présentes)"
             }
         },
         {
@@ -21,7 +21,12 @@
             "generates_subjects_for": "verify",
             "generates_subjects_after": 3,
             "generates_subjects_max": 10,
-            "generates_subjects_method": "collect-unique"
+            "generates_subjects_method": "collect-unique",
+            "instructions": {
+                "select_tags": "Quels tags pouvez-vous associer à ce contenu de type {subject} ?",
+                "transcribe": "Proposez la meilleure transcription pour le(s) élément(s) suivant(s) du contenu de type {subject}"
+
+            }
         },
         {
             "name": "verify",
@@ -32,24 +37,27 @@
             "generates_subjects_after": 3,
             "generates_subjects_max": 20,
             "generates_subjects_agreement": 0.75,
-            "subjects_classifiable_by_creator": false
+            "subjects_classifiable_by_creator": false,
+            "instructions": {
+                "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+            }
         }
     ],
     "subjects": [
         {
             "name": "ctn_ecrit",
-            "label": "Contenu écrit manuscrit",
+            "label": "Zone de texte autonome (principale)",
             "description": "",
             "categories": [
                 {
-                    "name": "sci_obj",
-                    "label": "Contenu à pertinence scientifique, objectif",
-                    "description": "Contenu écrit contenant des informations factuelles, scientifiques comme des textes contenant des descriptions de découvertes, des remarques sur l'état des fouilles, des analyses scientifiques ...",
-                    "supp_elements": [
+                    "name": "obs_desc_inter",
+                    "label": "Observation, description, interprétation",
+                    "description": "...",
+                    "structure": [
                         {
                             "name": "date",
                             "label": "Date",
-                            "description": "Date de rédaction associée au contenu (si elle existe)",
+                            "description": "Date de rédaction associée au contenu",
                             "examples": [
                                 "02/05/1975",
                                 "02/06/1985"
@@ -61,125 +69,168 @@
                     ]
                 },
                 {
-                    "name": "refl_hyp",
-                    "label": "Contenu associé aux réflexions, hypothèses de l'auteur",
-                    "description": "Contenu écrit contenant des réflexions, hypothèses de l'auteur permettant par exemple de suivre l'avancé des fouilles et ainsi de la progression de l'équipe",
-                    "supp_elements": []
-                },
-                {
-                    "name": "subj_pers",
-                    "label": "Contenu plus personnel, subjectif",
-                    "description": "Contenu écrit empreint  des émotions de l'auteur, ayant peu d'intérêt scientifique mais pouvant donner plus d'information sur les pratiques de l'auteur, l'ambiance de l'équipe, ...",
-                    "supp_elements": []
+                    "name": "comm",
+                    "label": "Commentaires",
+                    "description": "...",
+                    "structure": []
                 },
                 {
                     "name": "other",
-                    "label": "Autre catégorie non référencée",
+                    "label": "Autre catégorie",
                     "description": "Contenu écrit non référencé dans les choix ci-dessus.",
-                    "supp_elements": []
+                    "structure": []
                 }
             ]
         },
         {
             "name": "ctn_graph",
-            "label": "Contenu graphique manuscrit",
-            "description": "",
+            "label": "Zone graphique",
+            "description": "...",
             "categories": [
-                {
-                    "name": "croq_draw",
-                    "label": "Croquis/Dessin d'observation",
-                    "supp_elements": [
+                { 
+                    "name": "releve",
+                    "label": "Relevé",
+                    "description": "...",
+                    "tags":[
+                        {
+                            "name": "type",
+                            "label": "Type de relevé",
+                            "toolType":"selectOneTool",
+                            "options":[
+                                {
+                                    "label":"Plan",
+                                    "value": "plan"
+                                },
+                                {
+                                    "label":"Coupe",
+                                    "value":"coupe"
+                                },
+                                {
+                                    "label":"Elevation",
+                                    "value":"elevation"
+                                }
+                            ]
+                        }
+                    ],
+                    "structure": [ 
                         {
                             "name": "title",
                             "label": "Titre",
-                            "description": "",
+                            "description": "...",
                             "optional": true,
                             "toolType": "textTool"
                         },
                         {
                             "name": "legend_comm",
                             "label": "Légende et commentaires",
-                            "description": "",
+                            "description": "...",
                             "optional": true,
                             "toolType": "textTool"
                         },
                         {
                             "name": "date",
                             "label": "Date",
-                            "description": "",
+                            "description": "...",
                             "optional": true,
                             "toolType": "dateTool"
                         }
                     ]
                 },
                 {
-                    "name": "schema",
-                    "label": "Schéma",
-                    "supp_elements": []
+                    "name": "croquis_dessin_schema",
+                    "label": "Croquis,Dessin,Schéma",
+                    "description": "...",
+                    "structure": []
                 },
                 {
                     "name": "other",
                     "label": "Catégorie non référencée",
-                    "supp_elements": []
+                    "description": "...",
+                    "structure": []
                 }
             ]
         },
         {
-            "name": "ctn_addit",
-            "label": "Document additionnel",
-            "description": "Le contenu additionnel fait référence à des documents ajouté (scotché, collé, ...) au carnet aussi bien au cours des fouilles qu'à postoriori.",
+            "name": "ctn_imp",
+            "label": "Objet importé",
+            "description": "Les objets importés font références à des documents ajoutés (scotché, collé, ...) au carnet aussi bien au cours des fouilles qu'à postoriori.",
             "categories": [
                 {
-                    "name": "stand_sci",
-                    "label": "Document standardisé à pertinence scientifique",
-                    "supp_elements": []
+                    "name": "form_enr",
+                    "label": "Formulaire d'enregistrement",
+                    "description": "...",
+                    "structure": []
                 },
                 {
                     "name": "photo",
-                    "label": "Photographie de terrain",
-                    "supp_elements": []
+                    "label": "Photographie",
+                    "description": "...",
+                    "structure": []
                 },
                 {
-                    "name": "pers",
-                    "label": "Document plus personnel",
-                    "supp_elements": []
+                    "name": "graph_imp",
+                    "label": "Objet graphique importé",
+                    "description": "...",
+                    "structure": []
                 },
                 {
                     "name": "other",
-                    "label": "Catégorie non référencée",
-                    "supp_elements": []
+                    "label": "Autre catégorie",
+                    "description": "...",
+                    "structure": []
                 }
             ]
         },
         {
-            "name": "ctn_annot",
-            "label": "Annotations et information complémentaire",
+            "name": "ctn_assoc",
+            "label": "Zone de texte associé",
             "description": "Les annotations et autres informations complémentaires contribuent à l'évolution du contenu d'un carnet et ainsi sa complexité de transcription.",
             "categories": [
                 {
-                    "name": "obj_sci",
-                    "label": "Informations complémentaires de type textuel",
-                    "supp_elements": []
-                },
-                {
                     "name": "ref",
                     "label": "Références",
-                    "supp_elements": []
-                },
-                {
-                    "name": "pers",
-                    "label": "Annotation personnelle, subjective",
-                    "supp_elements": []
+                    "description": "...",
+                    "tags": [
+                        {
+                            "name": "ref_type",
+                            "Label":"Type de référence",
+                            "toolType": "selectOneTool",
+                            "instruction":"Quelle est le type de références à transcrire ?",
+                            "options": [
+                                {
+                                    "label": "1",
+                                    "value": "1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "3"
+                                }
+                            ]
+                        }
+                    ],
+                    "structure": []
                 },
                 {
                     "name": "sci",
-                    "label": "Information complémentaires de type graphique",
-                    "supp_elements": []
+                    "label": "Annotation scientifique",
+                    "description": "...",
+                    "structure": []
+                },
+                {
+                    "name": "hum",
+                    "label": "Trait d'humeur et d'humour",
+                    "description": "...",
+                    "structure": []
                 },
                 {
                     "name": "other",
                     "label": "Autre type d'annotation",
-                    "supp_elements": []
+                    "description": "...",
+                    "structure": []
                 }
             ]
         }

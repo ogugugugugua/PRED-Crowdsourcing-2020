@@ -1,90 +1,100 @@
-/*
-    1) récupérer la config globale
-    2) générer les tâches
-        2.1) iterate over subjects + categories
-            2.1.1) créer le tool (si supp_element>0 alors composite)
-            2.1.2) générer les attributs nécessaires (instructions, examples, help{title,body}, generate_subject ...)
-            2.1.3) si composite => crée toolConfig => iterate over supp_element et peuplé tools (idem que précédemment pour générer que les attributs)       
-
-*/
+"use strict";
 const fs = require('fs');
-
-
-/*
-Cas composite tool
-"XXXXX": {
-      "tool": "compositeTool",
-      "instruction": "",
-      "generates_subjects": true,
-      "tool_config": {
-        "tools": {
-          "XXXXXX_content": {
-            "tool": "textAreaTool",
-            "tool_config": {},
-            "label": "XXXX",
-            "generates_subject_type": "transcribed_XXXX"
-          },
-          "XXXXX":{
-            "tool": "XXXX",
-            "tool_config": {},
-            "label": "XXXX",
-            "generates_subject_type": "transcribed_XXXX"
-          }
-        }
-      }
-    }
-
-*/
+const strFormat = require('./utils/utils');
 
 module.exports = function(config,subjects){
-    console.log("Transcribe config generated!");
      
     var json = config;
     var tasks = {};
     var eachTask = {};
+    let helpFiles = [];
 
+    // on itère sur les subjects
     for(var j = 0; j < subjects.length; j++){
 
+      // on itère sur les catégories de subjects
       for(var i = 0; i < subjects[j].categories.length; i ++){
-        var name = subjects[j].name + '_' + subjects[j].categories[i].name;
+
+        var entryTaskName = subjects[j].name + '_' + subjects[j].categories[i].name;
+        let pickTasks = {};
+        let helpObjTransc = {
+          fileName: `pc_tr_${entryTaskName}.md`,
+          content: `#Comment transcrire un contenu de la catégorie *${subjects[j].categories[i].label}*\n<p>...</p>`
+        };
+        // on crée les tâches de choix de tags si elles existent
+        /*if(subjects[j].categories[i].tags){
+          for(let l = 0; l < subjects[j].categories[i].tags.length; l++){
+            let tagTask = subjects[j].categories[i].tags[l];
+            let tagTaskName = l === 0 ? entryTaskName : 'picktag_'+entryTaskName+'_'+tagTask.name;
+            
+            let tt = {};
+            tt['tool'] = tagTask['toolType'];
+            tt['instruction'] = strFormat(config['instructions']['select_tags'],{subject: subjects[j].categories[i].label});
+            tt['help'] = {file:`pc_tag_${entryTaskName}.md`};
+            tt['tool_config'] = {
+              options : tagTask['options']
+            };
+
+            // la prochaine tâche sera soit le tag suivant à choisir soit la transcription principale
+            if(l < subjects[j].categories[k].tags.length-1){
+              tt['next_task'] = 'picktag_'+entryTaskName+'_'+subjects[j].categories[i].tags[l+1].name;
+            }
+            else{
+              tt['next_task'] = 'transcribe_'+entryTaskName;
+            }
+
+            pickTasks[tagTaskName] = tt; 
+          }
+        }*/
+
+        let name = Object.keys(pickTasks).length === 0 ? entryTaskName : 'transcribe_'+entryTaskName;
         var tool = {"tool": "compositeTool"};
         var generates_subjects = {"generates_subjects" : true};
         var instruction = {"instruction":subjects[j].categories[i].description};
-        
         var temp = {};
-        temp['tr_'+name] = {"tool": "textAreaTool", "tool_config": {}, "label": subjects[j].categories[i].label, "generates_subject_type": "transcribed_"+name};
+        temp['tr_'+name] = {"tool": "textAreaTool", "tool_config": {}, "label": subjects[j].categories[i].label, "generates_subject_type": "transcribed_"+entryTaskName+'_content'};
         var tool_config = {};
         
-        for(var k = 0; k < subjects[j].categories[i].supp_elements.length; k++){
-          var toolName = 'tr_'+subjects[j].name + '_' + subjects[j].categories[i].name + '_' + subjects[j].categories[i].supp_elements[k].name;
-          var toolType = subjects[j].categories[i].supp_elements[k].toolType;
-          var toolLabel = subjects[j].categories[i].supp_elements[k].label;
-          var generates_subject_type = "transcribed_" + toolName;
+        for(var k = 0; k < subjects[j].categories[i].structure.length; k++){
+            
+          let helpObjStruct = {
+            fileName: `pc_struct_${entryTaskName}.md`,
+            content: `#${subjects[j].categories[i].structure[k].label}\n<p>${subjects[j].categories[i].structure[k].description}</p>`
+          };
 
-          temp[toolName] = {"tool":toolType, "tool_config":{}, "label":toolLabel, "generates_subject_type":generates_subject_type};
+          var toolName = 'tr_'+subjects[j].name + '_' + subjects[j].categories[i].name + '_' + subjects[j].categories[i].structure[k].name;
+          var toolType = subjects[j].categories[i].structure[k].toolType;
+          var toolLabel = subjects[j].categories[i].structure[k].label;
+          var generates_subject_type = "transcribed_" + subjects[j].name + '_' + subjects[j].categories[i].name + '_' + subjects[j].categories[i].structure[k].name;
+          let tmp_tool_config = {}
+
+          temp[toolName] = {"tool":toolType, "tool_config":tmp_tool_config, "label":toolLabel, "help":{file: helpObjStruct.fileName.split('.')[0]}, "generates_subject_type":generates_subject_type};
+          helpFiles.push(helpObjStruct);
         }
         tool_config["tools"] = temp;
 
-        if(typeof(subjects[j].categories[i].description)=="undefined"){
-          eachTask[name] = {"tool": "compositeTool", "instruction": "", "generates_subjects" : true, "tool_config":tool_config};
-        }else{
-          eachTask[name] = {"tool": "compositeTool", "instruction": subjects[j].categories[i].description, "generates_subjects" : true, "tool_config":tool_config};
-        }
+          eachTask[name] = {
+            "tool": "compositeTool",
+            "instruction": strFormat(config['instructions']['transcribe'],{subject: subjects[j].categories[i].label}),
+            "generates_subjects" : true,
+            "help": {file: helpObjTransc.fileName.split('.')[0]},
+            "tool_config":tool_config
+          };
+          helpFiles.push(helpObjTransc);
+        //eachTask = Object.assign(eachTask, pickTasks);
       }  
       
     }
     
     json["tasks"] = eachTask;
+    delete json['instructions'];
 
     // convert JSON object to string
     const data = JSON.stringify(json, null, 4);
 
     // write JSON string to a file
-    fs.writeFile('output/test_transcribe.json', data, (err) => {
-        if (err) {
-            throw err;
-        }
-        console.log("JSON data is saved.");
-    });
-    
+    fs.writeFileSync('output/transcribe.json', data);
+    helpFiles.map((file) => fs.writeFileSync("./../../content/help/"+file.fileName, file.content));
+    console.log("Transcribe config and help files generated!");
+        
 }
