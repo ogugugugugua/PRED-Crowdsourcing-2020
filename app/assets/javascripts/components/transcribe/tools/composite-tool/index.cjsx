@@ -98,18 +98,18 @@ CompositeTool = React.createClass
       buttons.push <HelpButton onClick={@props.onShowHelp} key="help-button"/>
 
     if @props.onBadSubject?
-      buttons.push <BadSubjectButton key="bad-subject-button" label={"Bad #{@props.project.term('mark')}"} active={@props.badSubject} onClick={@props.onBadSubject} />
+      buttons.push <BadSubjectButton key="bad-subject-button" label={"Mauvaise #{@props.project.term('mark')}"} active={@props.badSubject} onClick={@props.onBadSubject} />
 
     if @props.onIllegibleSubject?
       buttons.push <IllegibleSubjectButton active={@props.illegibleSubject} onClick={@props.onIllegibleSubject} key="illegible-subject-button"/>
 
     buttonLabel =
       if @props.task.next_task?
-       'Continue'
+       'Continuer'
       else
         if @props.isLastSubject and ( @props.transcribeMode is 'page' or @props.transcribeMode is 'single' )
           'Return to Marking'
-        else 'Next Entry'
+        else 'Enregistrement suivant'
 
     buttons.push <SmallButton label={buttonLabel} key="done-button" onClick={@commitAnnotation} />
 

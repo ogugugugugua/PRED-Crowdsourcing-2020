@@ -220,6 +220,15 @@ TextTool = React.createClass
               }
             </select>
 
+          else if @props.inputType == "pick-one-tag"
+            <select {...atts}>
+              <option value=""></option>
+              {
+                @props.tool_config.options.map (option, i) =>
+                  <option key={i} value={option.value}>{option.label}</option>
+              }
+            </select>
+
           else console.warn "Invalid inputType specified: #{@props.inputType}"
 
         }

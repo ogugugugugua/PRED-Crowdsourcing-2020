@@ -3,8 +3,9 @@ module.exports =
   compositeTool: require './composite-tool'
   singleTool:    require './single-tool'
 
-  textTool:      require './text-tool' # this will soon be subsumed by single-tool
-  dateTool:      require './date-tool'
-  numberTool:    require './number-tool'
-  textAreaTool:  require './text-area-tool'
-  pickOneTag: 	 require './pick-one-tag'
+  textTool:       require './text-tool' # this will soon be subsumed by single-tool
+  dateTool:       require './date-tool'
+  numberTool:     require './number-tool'
+  textAreaTool:   require './text-area-tool'
+  pickOneTagTool: require './pick-one-tag-tool'
+  selectOneTool:  require './select-one-tool'

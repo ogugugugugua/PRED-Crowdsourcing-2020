@@ -11,7 +11,7 @@
   "tasks": {
     "transcribed_ctn_ecrit_obs_desc_inter_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -24,7 +24,7 @@
     },
     "transcribed_ctn_ecrit_comm_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -37,7 +37,7 @@
     },
     "transcribed_ctn_ecrit_other_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -50,7 +50,7 @@
     },
     "transcribed_ctn_graph_releve_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -63,7 +63,7 @@
     },
     "transcribed_ctn_graph_croquis_dessin_schema_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -76,7 +76,7 @@
     },
     "transcribed_ctn_graph_other_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -89,7 +89,7 @@
     },
     "transcribed_ctn_imp_form_enr_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -102,7 +102,7 @@
     },
     "transcribed_ctn_imp_photo_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -115,7 +115,7 @@
     },
     "transcribed_ctn_imp_graph_imp_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -128,7 +128,7 @@
     },
     "transcribed_ctn_imp_other_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -141,7 +141,7 @@
     },
     "transcribed_ctn_assoc_ref_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -154,7 +154,7 @@
     },
     "transcribed_ctn_assoc_sci_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -167,7 +167,7 @@
     },
     "transcribed_ctn_assoc_hum_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {
@@ -180,7 +180,7 @@
     },
     "transcribed_ctn_assoc_other_content+'_content": {
       "instruction": {
-        "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+        "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
       "tool": "verifyTool",
       "tool_config": {

@@ -1,0 +1,2 @@
+#Zone de texte autonome
+<p>Ce type de contenu englobe un grand nombre de texte manuscrit structuré, variant de par sa pertinence scientifique, sa subjectivité ...</p>

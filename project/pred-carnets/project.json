@@ -11,7 +11,7 @@
     "group": "collection",
     "subject set": "page",
     "subject": "page",
-    "mark": "region"
+    "mark": "zone"
   },
   "team_emails": [
     "maximilien.rioult@etu.univ-nantes.fr",
@@ -28,16 +28,15 @@
   "organizations": [
     {
       "title": "Polytech Nantes",
-      "description": "Books, mostly.",
-      "url":"https://polytech.univ-nantes.fr/",
-      "logo": "https://polytech.univ-nantes.fr/medias/photo/polytech-nantes-q-univ_1530525910404-jpg?ID_FICHE=944315"
+      "description": "",
+      "url":"https://polytech.univ-nantes.fr/"
     }
   ],
   "menus": {
     "main": [
-      {"label": "Intro", "page": "intro"},
-      {"label": "Data", "page": "data"},
-      {"label": "About", "page": "about"}
+      {"label": "Guide", "page": "guide"},
+      {"label": "Données", "page": "data"},
+      {"label": "À propos", "page": "about"}
     ],
     "footer": []
   }

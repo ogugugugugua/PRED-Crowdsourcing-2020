@@ -5,6 +5,8 @@ markTools               = require 'components/mark/tools'
 transcribeTools         = require 'components/transcribe/tools'
 verifyTools             = require 'components/verify/tools'
 
+workflow_names          = {transcribe: 'transcrire', mark:'marquer', verify:'verifier'}
+
 module.exports =
 
   # Convenience method for selecting currently active workflow based on active controller
@@ -296,23 +298,23 @@ module.exports =
 
   getCompletionAssessmentTask: ->
     generates_subject_type: null
-    instruction: "Thanks for all your work! Is there anything left to #{@props.workflowName}?"
+    instruction: "Merci de votre travail! Reste-t-il autre chose à  #{workflow_names[@props.workflowName]}?"
     key: "completion_assessment_task"
     next_task: null
     tool: "pickOne"
     help: {
-      title: "Completion Assessment",
-      body: "<p>Have all requested fields on this page been marked with a rectangle?</p><p>You do not have to mark every field on the page, however, it helps us to know if you think there is more to mark. Thank you!</p>"
+      title: "Evaluation du résultat",
+      body: "<p>Toutes les zones identifiées ont-elles bien été marquées par un rectangle ?</p><p>Cela nous permet de savoir si les résultats sont complets, merci pour votre travail!</p>"
     },
     tool_config: {
       "options": [
         {
-          "label": "Yes",
+          "label": "Oui",
           "next_task": null,
           "value": "incomplete_subject"
         }
         {
-          "label": "No",
+          "label": "Non",
           "next_task": null,
           "value": "complete_subject"
         }

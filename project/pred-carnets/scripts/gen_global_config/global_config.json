@@ -9,8 +9,8 @@
             "generates_subjects_for": "transcribe",
             "first_task": "pk_ctn_ecrit",
             "instructions": {
-                "pick": "Identifiez-vous du contenu de type **{subject}** sur cette page ?",
-                "mark": "Identifiez et marquez les zones associées aux contenus de type **{subject}** des catégories suivantes (si elles sont présentes)"
+                "pick": "<p style=\"text-align:center;font-weight:bold;\">Identifiez-vous du contenu de type <h3 style=\"text-align:center;color:{color};font-weight:bolder;font-size:1.17em;\">{subject}</h3></p>",
+                "mark": "<p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>"
             }
         },
         {
@@ -23,8 +23,7 @@
             "generates_subjects_max": 10,
             "generates_subjects_method": "collect-unique",
             "instructions": {
-                "select_tags": "Quels tags pouvez-vous associer à ce contenu de type {subject} ?",
-                "transcribe": "Proposez la meilleure transcription pour le(s) élément(s) suivant(s) du contenu de type {subject}"
+                "transcribe": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents."
 
             }
         },
@@ -39,21 +38,29 @@
             "generates_subjects_agreement": 0.75,
             "subjects_classifiable_by_creator": false,
             "instructions": {
-                "verify": "Sélectionnez la meilleure transcription pour ce contenu ou entrez la vôtre !"
+                "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
             }
         }
     ],
     "subjects": [
         {
             "name": "ctn_ecrit",
-            "label": "Zone de texte autonome (principale)",
-            "description": "",
+            "label": "Zone de texte autonome",
+            "description": "Ce type de contenu englobe un grand nombre de texte manuscrit structuré, variant de par sa pertinence scientifique, sa subjectivité ...",
             "categories": [
                 {
                     "name": "obs_desc_inter",
                     "label": "Observation, description, interprétation",
                     "description": "...",
                     "structure": [
+                        {
+                            "name": "titre",
+                            "label": "Titre/Label",
+                            "description": "Titre ou label associé au texte marqué",
+                            "optional": true,
+                            "toVerify": false,
+                            "toolType": "textTool"
+                        },
                         {
                             "name": "date",
                             "label": "Date",
@@ -95,18 +102,19 @@
                         {
                             "name": "type",
                             "label": "Type de relevé",
+                            "instruction": "Quel est le type de relevé identifié ?",
                             "toolType":"selectOneTool",
                             "options":[
                                 {
-                                    "label":"Plan",
+                                    "label":"Relevé en plan",
                                     "value": "plan"
                                 },
                                 {
-                                    "label":"Coupe",
+                                    "label":"Relevé en coupe",
                                     "value":"coupe"
                                 },
                                 {
-                                    "label":"Elevation",
+                                    "label":"Relevé en élevation",
                                     "value":"elevation"
                                 }
                             ]
@@ -119,20 +127,6 @@
                             "description": "...",
                             "optional": true,
                             "toolType": "textTool"
-                        },
-                        {
-                            "name": "legend_comm",
-                            "label": "Légende et commentaires",
-                            "description": "...",
-                            "optional": true,
-                            "toolType": "textTool"
-                        },
-                        {
-                            "name": "date",
-                            "label": "Date",
-                            "description": "...",
-                            "optional": true,
-                            "toolType": "dateTool"
                         }
                     ]
                 },
@@ -183,7 +177,7 @@
         },
         {
             "name": "ctn_assoc",
-            "label": "Zone de texte associé",
+            "label": "Zone de texte associée",
             "description": "Les annotations et autres informations complémentaires contribuent à l'évolution du contenu d'un carnet et ainsi sa complexité de transcription.",
             "categories": [
                 {
@@ -192,10 +186,11 @@
                     "description": "...",
                     "tags": [
                         {
-                            "name": "ref_type",
-                            "Label":"Type de référence",
+                            "name": "type",
+                            "label":"Type de référence",
                             "toolType": "selectOneTool",
-                            "instruction":"Quelle est le type de références à transcrire ?",
+                            "instruction":"Quel est le type de référence identifiée ?",
+                            "description":"...",
                             "options": [
                                 {
                                     "label": "1",

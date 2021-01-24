@@ -242,18 +242,18 @@ module.exports = React.createClass # rename to Classifier
 
                 <nav className="task-nav">
                   { if false
-                    <button type="button" className="back minor-button" disabled={onFirstAnnotation} onClick={@destroyCurrentAnnotation}>Back</button>
+                    <button type="button" className="back minor-button" disabled={onFirstAnnotation} onClick={@destroyCurrentAnnotation}>Retour</button>
                   }
                   { if @getNextTask() and not @state.badSubject?
-                      <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@advanceToNextTask}>Next</button>
+                      <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@advanceToNextTask}>Suivant</button>
                     else
                       if @state.taskKey == "completion_assessment_task"
                         if @getCurrentSubject() == @getCurrentSubjectSet().subjects[@getCurrentSubjectSet().subjects.length-1]
-                          <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@completeSubjectAssessment}>Next</button>
+                          <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@completeSubjectAssessment}>Suivant</button>
                         else
-                          <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@completeSubjectAssessment}>Next Page</button>
+                          <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@completeSubjectAssessment}>Page suivante</button>
                       else
-                        <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@completeSubjectSet}>Done</button>
+                        <button type="button" className="continue major-button" disabled={waitingForAnswer} onClick={@completeSubjectSet}>Continuer</button>
                   }
                 </nav>
 
@@ -262,10 +262,10 @@ module.exports = React.createClass # rename to Classifier
                     <HelpButton onClick={@toggleHelp} label="" className="task-help-button" />
                   }
                   { if onFirstAnnotation
-                    <BadSubjectButton class="bad-subject-button" label={"Bad " + @props.project.term('subject')} active={@state.badSubject} onClick={@toggleBadSubject} />
+                    <BadSubjectButton class="bad-subject-button" label={"Mauvaise " + @props.project.term('subject')} active={@state.badSubject} onClick={@toggleBadSubject} />
                   }
                   { if @state.badSubject
-                    <p>You&#39;ve marked this {@props.project.term('subject')} as BAD. Thanks for flagging the issue! <strong>Press DONE to continue.</strong></p>
+                    <p>Vous avez signalé cette {@props.project.term('subject')} comme étant mauvaise. Merci de votre contribution! <strong>Cliquer sur Continuer pour poursuivre votre tâche.</strong></p>
                   }
                 </div>
               </div>
@@ -276,14 +276,14 @@ module.exports = React.createClass # rename to Classifier
             {
               if @getCurrentTask()?
                 <p>
-                  <a className="tutorial-link" onClick={@toggleTutorial}>View A Tutorial</a>
+                  <a className="tutorial-link" onClick={@toggleTutorial}>Afficher le Tutoriel</a>
                 </p>
             }
 
             {
               if @getCurrentTask()? && @getActiveWorkflow()? && @getWorkflowByName('transcribe')?
                 <p>
-                  <Link to="/transcribe/#{@getWorkflowByName('transcribe').id}/#{@getCurrentSubject()?.id}" className="transcribe-link">Transcribe this {@props.project.term('subject')} now!</Link>
+                  <Link to="/transcribe/#{@getWorkflowByName('transcribe').id}/#{@getCurrentSubject()?.id}" className="transcribe-link">Transcrivez cette {@props.project.term('subject')} maintenant!</Link>
                 </p>
             }
 

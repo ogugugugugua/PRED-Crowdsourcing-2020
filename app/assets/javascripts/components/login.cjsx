@@ -15,7 +15,7 @@ Login = React.createClass
     <div className='login'>
       {@renderLoggedIn() if @props.user?.name? && ! @props.user.guest }
       {@renderLoggedInAsGuest() if @props.user && @props.user.guest }
-      {@renderLoginOptions("Log In:","login-container") if !@props.user }
+      {@renderLoginOptions("Se connecter :","login-container") if !@props.user }
     </div>
 
   signOut:(e)->
@@ -36,7 +36,7 @@ Login = React.createClass
 
   renderLoggedInAsGuest: ->
     <span >
-      { @renderLoginOptions('Log in to save your work:',"login-container") }
+      { @renderLoginOptions('Connectez-vous pour enregistrer votre travail:',"login-container") }
     </span>
 
   renderLoggedIn:->
@@ -44,17 +44,17 @@ Login = React.createClass
       { if @props.user.avatar
           <img src="#{@props.user.avatar}" />
       }
-      <span className="label">Hello {@props.user.name} </span><a className="logout" onClick={@signOut} >Logout</a>
+      <span className="label">Bonjour {@props.user.name} </span><a className="logout" onClick={@signOut} >Se déconnecter</a>
     </span>
 
 
   renderLoginOptions: (label,classNames) ->
     links = @props.loginProviders.map (link) ->
       icon_id = if link.id == 'zooniverse' then 'dot-circle-o' else link.id
-      <a key="login-link-#{link.id}" href={link.path} title="Log in using #{link.name}"><i className="fa fa-#{icon_id} fa-2" /></a>
+      <a key="login-link-#{link.id}" href={link.path} title="Connectez vous en utilisant #{link.name}"><i className="fa fa-#{icon_id} fa-2" /></a>
 
     <span className={classNames}>
-      <span className="label">{ label || "Log In:" }</span>
+      <span className="label">{ label || "Se connecter :" }</span>
       <div className='options'>
         { links }
       </div>

@@ -26,11 +26,11 @@ module.exports = React.createClass
 
         {
           # Workflows tabs:
-          workflow_names = ['transcribe','mark','verify']
-          workflows = (w for w in @props.workflows when w.name in workflow_names)
+          workflow_names = {transcribe: 'transcrire', mark:'marquer', verify:'verifier'}
+          workflows = (w for w in @props.workflows when w.name in Object.keys(workflow_names))
           workflows = workflows.sort (w1, w2) -> if w1.order > w2.order then 1 else -1
           workflows.map (workflow, key) =>
-            title = workflow.name.charAt(0).toUpperCase() + workflow.name.slice(1)
+            title = workflow_names[workflow.name].charAt(0).toUpperCase() + workflow_names[workflow.name].slice(1)
             <Link key={key} to="/#{workflow.name}" activeClassName="selected" className="main-header-item">{title}</Link>
         }
         { # Page tabs, check for main menu

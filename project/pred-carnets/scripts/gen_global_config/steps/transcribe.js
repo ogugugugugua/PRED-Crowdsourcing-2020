@@ -21,40 +21,17 @@ module.exports = function(config,subjects){
           fileName: `pc_tr_${entryTaskName}.md`,
           content: `#Comment transcrire un contenu de la catégorie *${subjects[j].categories[i].label}*\n<p>...</p>`
         };
-        // on crée les tâches de choix de tags si elles existent
-        /*if(subjects[j].categories[i].tags){
-          for(let l = 0; l < subjects[j].categories[i].tags.length; l++){
-            let tagTask = subjects[j].categories[i].tags[l];
-            let tagTaskName = l === 0 ? entryTaskName : 'picktag_'+entryTaskName+'_'+tagTask.name;
-            
-            let tt = {};
-            tt['tool'] = tagTask['toolType'];
-            tt['instruction'] = strFormat(config['instructions']['select_tags'],{subject: subjects[j].categories[i].label});
-            tt['help'] = {file:`pc_tag_${entryTaskName}.md`};
-            tt['tool_config'] = {
-              options : tagTask['options']
-            };
 
-            // la prochaine tâche sera soit le tag suivant à choisir soit la transcription principale
-            if(l < subjects[j].categories[k].tags.length-1){
-              tt['next_task'] = 'picktag_'+entryTaskName+'_'+subjects[j].categories[i].tags[l+1].name;
-            }
-            else{
-              tt['next_task'] = 'transcribe_'+entryTaskName;
-            }
-
-            pickTasks[tagTaskName] = tt; 
-          }
-        }*/
 
         let name = Object.keys(pickTasks).length === 0 ? entryTaskName : 'transcribe_'+entryTaskName;
         var tool = {"tool": "compositeTool"};
         var generates_subjects = {"generates_subjects" : true};
         var instruction = {"instruction":subjects[j].categories[i].description};
-        var temp = {};
-        temp['tr_'+name] = {"tool": "textAreaTool", "tool_config": {}, "label": subjects[j].categories[i].label, "generates_subject_type": "transcribed_"+entryTaskName+'_content'};
+        var temp = {};        
         var tool_config = {};
         
+        if(subjects[j].categories[i].structure){
+        // on crée les tâches pour la structure proposée
         for(var k = 0; k < subjects[j].categories[i].structure.length; k++){
             
           let helpObjStruct = {
@@ -70,7 +47,35 @@ module.exports = function(config,subjects){
 
           temp[toolName] = {"tool":toolType, "tool_config":tmp_tool_config, "label":toolLabel, "help":{file: helpObjStruct.fileName.split('.')[0]}, "generates_subject_type":generates_subject_type};
           helpFiles.push(helpObjStruct);
+        } 
         }
+        // on crée la tâche de transcription principale
+        temp['tr_'+name] = {"tool": "textAreaTool", "tool_config": {}, "label": "Contenu principal", "generates_subject_type": "transcribed_"+entryTaskName+'_content'};
+
+        if(subjects[j].categories[i].tags){
+        // on crée les tâches de choix de tags si elles existent
+          for(let l = 0; l < subjects[j].categories[i].tags.length; l++){
+            let tagTask = subjects[j].categories[i].tags[l];
+            let tagTaskName = 'picktag_'+entryTaskName+'_'+tagTask.name;
+            let helpObjTag = {
+              fileName: `pc_tag_${tagTaskName}.md`,
+              content: `#${subjects[j].categories[i].tags[l].label}\n<p>${subjects[j].categories[i].tags[l].description}</p>`
+            };
+
+            let tt = {
+                    tool:tagTask['toolType'],
+                    label: strFormat(subjects[j].categories[i].tags[l].instruction,{subject: subjects[j].categories[i].label}),
+                    help:{file:helpObjTag.fileName.split('.')[0]},
+                    tool_config:{
+                      options : tagTask['options']
+                    }
+            };
+            temp[tagTaskName] = tt; 
+            helpFiles.push(helpObjTag);
+        } 
+        }
+
+
         tool_config["tools"] = temp;
 
           eachTask[name] = {
@@ -81,7 +86,6 @@ module.exports = function(config,subjects){
             "tool_config":tool_config
           };
           helpFiles.push(helpObjTransc);
-        //eachTask = Object.assign(eachTask, pickTasks);
       }  
       
     }

@@ -1,0 +1,6 @@
+#!usr/bin/bash
+cd ~/Desktop/PRED/pred-crowdsourcing-2020
+source ~/.rvm/scripts/rvm
+bundle
+export DEVISE_SECRET_TOKEN='3deb3d80d4a9c4bbcfc988f5b86ed69ec916ada1b4aeb1872e345fc4a7c07ee4c05127bed9e76e21f0f02feedcb6e16eb826d894820f4e338566cad73f39eded'
+export SECRET_KEY_BASE_TOKEN='PSNR5QBQdQSradjbwd3gakE4Z6suhh'

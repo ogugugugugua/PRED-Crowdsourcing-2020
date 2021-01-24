@@ -6,6 +6,8 @@ const randomColor = require('randomcolor');
 
 module.exports = function (config, subjects) {
     let helpFiles = [];
+    let subjectColorsTab = randomColor({count:subjects.length, luminosity:'dark'});
+
     let markTasks = _.reduce(subjects, (acc, subject, idx, tab) => {
 
         let pickKey = "pk_" + subject.name;
@@ -24,7 +26,7 @@ module.exports = function (config, subjects) {
 
         /* Génération de la tâche pick associée au sujet*/
         acc[pickKey] = {
-            instruction: strFormat(config.instructions.pick, { subject: subject.label }),
+            instruction: strFormat(config.instructions.pick, { subject: subject.label, color: subjectColorsTab[idx] }),
             tool: "pickOne",
             help: { file: helpObjSubjPick.fileName.split('.')[0]},
             tool_config: {
@@ -54,7 +56,7 @@ module.exports = function (config, subjects) {
         };
 
         // tool config ici
-        let colorsTab = randomColor({count: subject.categories.length});
+        let catColorsTab = randomColor({count: subject.categories.length});
         acc[markKey]['tool_config']['options'] = _.reduce(subject.categories, (acc2, cat, idx2) => {
             let helpObjCat = {
                 fileName :`pc_cat_${subject.name}_${cat.name}.md`,
@@ -64,7 +66,7 @@ module.exports = function (config, subjects) {
             let newMarkTasks = {
                         type: "rectangleTool",
                         label: cat.label,
-                        color: colorsTab[idx2],
+                        color: catColorsTab[idx2],
                         generates_subject_type: `${subject.name}_${cat.name}`,
                         help: {file: helpObjCat.fileName.split('.')[0]}
                 };
