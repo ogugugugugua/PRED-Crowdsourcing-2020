@@ -50,7 +50,7 @@ module.exports = function(config,subjects){
         } 
         }
         // on crée la tâche de transcription principale
-        temp['tr_'+name] = {"tool": "textAreaTool", "tool_config": {}, "label": "Contenu principal", "generates_subject_type": "transcribed_"+entryTaskName+'_content'};
+        temp['tr_'+name] = {"tool": "textAreaTool", "tool_config": {}, "label": "Contenu principal", "generates_subject_type": "transcribed_" + entryTaskName + "_content"};
 
         if(subjects[j].categories[i].tags){
         // on crée les tâches de choix de tags si elles existent

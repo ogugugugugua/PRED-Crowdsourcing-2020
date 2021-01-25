@@ -26,6 +26,15 @@
                         },
                         "generates_subject_type": "transcribed_ctn_ecrit_obs_desc_inter_titre"
                     },
+                    "tr_ctn_ecrit_obs_desc_inter_date": {
+                        "tool": "dateTool",
+                        "tool_config": {},
+                        "label": "Date",
+                        "help": {
+                            "file": "pc_struct_ctn_ecrit_obs_desc_inter"
+                        },
+                        "generates_subject_type": "transcribed_ctn_ecrit_obs_desc_inter_date"
+                    },
                     "tr_ctn_ecrit_obs_desc_inter": {
                         "tool": "textAreaTool",
                         "tool_config": {},

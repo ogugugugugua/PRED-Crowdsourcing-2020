@@ -14,31 +14,32 @@ module.exports = function (config, subjects) {
       let suppElts = subjects[i].categories[j].structure;
       
 
-        let name = `${subjects[i].name}_${subjects[i].categories[j].name}_content`;
+        let name = `${subjects[i].name}_${subjects[i].categories[j].name}`;
         let helpObjCont = {
           fileName : 'pc_vf_'+name+'.md',
           content: `#Comment vérifier le contenu principal de la catégorie *${subjects[i].categories[j].label} ?\n<p>...</p>`
         };
 
-        verifyTasks[`transcribed_${name}+'_content`] = {
+        verifyTasks[`transcribed_${name}_content`] = {
           instruction: config.instructions,
           tool: "verifyTool",
           tool_config: {
             "displays_transcribe_button": true
           },
           help: { "file": helpObjCont.fileName.split('.')[0] },
-          generates_subject_type: "consensus_" + name
+          generates_subject_type: "consensus_" + name + "_content"
         };
         helpFiles.push(helpObjCont);
 
       for (let k = 0; k < subjects[i].categories[j].structure.length; k++){
-        if (!subjects[i].categories[j].structure[k].toVerify) continue;
+        if (!subjects[i].categories[j].structure[k].toVerify === false) continue;
+        let speName = subjects[i].name + '_' + subjects[i].categories[j].name + '_' + subjects[i].categories[j].structure[k].name;
+
         let helpObjStruct = {
           fileName : 'pc_vf_'+speName+'.md',
           content: `#Comment vérifier la transcription du sous-contenu *${subjects[i].categories[j].structure[k].label} ?\n<p>...</p>`
         };
-        let speName = name + '_' + subjects[i].categories[j].structure[k]
-        verifyTasks[`transcribed_${speName}`] = {
+        verifyTasks["transcribed_" + speName] = {
             instruction: config.instructions['verify'],
             tool: "verifyTool",
             tool_config: {

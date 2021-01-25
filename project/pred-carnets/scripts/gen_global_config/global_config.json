@@ -46,12 +46,12 @@
         {
             "name": "ctn_ecrit",
             "label": "Zone de texte autonome",
-            "description": "Ce type de contenu englobe un grand nombre de texte manuscrit structuré, variant de par sa pertinence scientifique, sa subjectivité ...",
+            "description": "Ce type de contenu englobe un grand nombre de type de contenu parmi les textes manuscrits, variant de par sa pertinence scientifique, sa subjectivité ... On peut identifié une zone de texte autonome par l'apport d'informations à travers un format de texte structuré.",
             "categories": [
                 {
                     "name": "obs_desc_inter",
                     "label": "Observation, description, interprétation",
-                    "description": "...",
+                    "description": "Cette catégorie de zone de texte autonome peut être identifié par la présence de plusieurs paragraphes",
                     "structure": [
                         {
                             "name": "titre",

@@ -9,7 +9,7 @@
   "generates_subjects_agreement": 0.75,
   "subjects_classifiable_by_creator": false,
   "tasks": {
-    "transcribed_ctn_ecrit_obs_desc_inter_content+'_content": {
+    "transcribed_ctn_ecrit_obs_desc_inter_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -18,11 +18,33 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_ecrit_obs_desc_inter_content"
+        "file": "pc_vf_ctn_ecrit_obs_desc_inter"
       },
       "generates_subject_type": "consensus_ctn_ecrit_obs_desc_inter_content"
     },
-    "transcribed_ctn_ecrit_comm_content+'_content": {
+    "transcribed_ctn_ecrit_obs_desc_inter_titre": {
+      "instruction": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": "pc_vf_ctn_ecrit_obs_desc_inter_titre"
+      },
+      "generates_subject_type": "consensus_ctn_ecrit_obs_desc_inter_titre"
+    },
+    "transcribed_ctn_ecrit_obs_desc_inter_date": {
+      "instruction": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": "pc_vf_ctn_ecrit_obs_desc_inter_date"
+      },
+      "generates_subject_type": "consensus_ctn_ecrit_obs_desc_inter_date"
+    },
+    "transcribed_ctn_ecrit_comm_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -31,11 +53,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_ecrit_comm_content"
+        "file": "pc_vf_ctn_ecrit_comm"
       },
       "generates_subject_type": "consensus_ctn_ecrit_comm_content"
     },
-    "transcribed_ctn_ecrit_other_content+'_content": {
+    "transcribed_ctn_ecrit_other_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -44,11 +66,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_ecrit_other_content"
+        "file": "pc_vf_ctn_ecrit_other"
       },
       "generates_subject_type": "consensus_ctn_ecrit_other_content"
     },
-    "transcribed_ctn_graph_releve_content+'_content": {
+    "transcribed_ctn_graph_releve_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -57,11 +79,22 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_graph_releve_content"
+        "file": "pc_vf_ctn_graph_releve"
       },
       "generates_subject_type": "consensus_ctn_graph_releve_content"
     },
-    "transcribed_ctn_graph_croquis_dessin_schema_content+'_content": {
+    "transcribed_ctn_graph_releve_title": {
+      "instruction": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": {
+        "file": "pc_vf_ctn_graph_releve_title"
+      },
+      "generates_subject_type": "consensus_ctn_graph_releve_title"
+    },
+    "transcribed_ctn_graph_croquis_dessin_schema_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -70,11 +103,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_graph_croquis_dessin_schema_content"
+        "file": "pc_vf_ctn_graph_croquis_dessin_schema"
       },
       "generates_subject_type": "consensus_ctn_graph_croquis_dessin_schema_content"
     },
-    "transcribed_ctn_graph_other_content+'_content": {
+    "transcribed_ctn_graph_other_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -83,11 +116,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_graph_other_content"
+        "file": "pc_vf_ctn_graph_other"
       },
       "generates_subject_type": "consensus_ctn_graph_other_content"
     },
-    "transcribed_ctn_imp_form_enr_content+'_content": {
+    "transcribed_ctn_imp_form_enr_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -96,11 +129,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_imp_form_enr_content"
+        "file": "pc_vf_ctn_imp_form_enr"
       },
       "generates_subject_type": "consensus_ctn_imp_form_enr_content"
     },
-    "transcribed_ctn_imp_photo_content+'_content": {
+    "transcribed_ctn_imp_photo_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -109,11 +142,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_imp_photo_content"
+        "file": "pc_vf_ctn_imp_photo"
       },
       "generates_subject_type": "consensus_ctn_imp_photo_content"
     },
-    "transcribed_ctn_imp_graph_imp_content+'_content": {
+    "transcribed_ctn_imp_graph_imp_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -122,11 +155,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_imp_graph_imp_content"
+        "file": "pc_vf_ctn_imp_graph_imp"
       },
       "generates_subject_type": "consensus_ctn_imp_graph_imp_content"
     },
-    "transcribed_ctn_imp_other_content+'_content": {
+    "transcribed_ctn_imp_other_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -135,11 +168,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_imp_other_content"
+        "file": "pc_vf_ctn_imp_other"
       },
       "generates_subject_type": "consensus_ctn_imp_other_content"
     },
-    "transcribed_ctn_assoc_ref_content+'_content": {
+    "transcribed_ctn_assoc_ref_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -148,11 +181,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_assoc_ref_content"
+        "file": "pc_vf_ctn_assoc_ref"
       },
       "generates_subject_type": "consensus_ctn_assoc_ref_content"
     },
-    "transcribed_ctn_assoc_sci_content+'_content": {
+    "transcribed_ctn_assoc_sci_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -161,11 +194,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_assoc_sci_content"
+        "file": "pc_vf_ctn_assoc_sci"
       },
       "generates_subject_type": "consensus_ctn_assoc_sci_content"
     },
-    "transcribed_ctn_assoc_hum_content+'_content": {
+    "transcribed_ctn_assoc_hum_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -174,11 +207,11 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_assoc_hum_content"
+        "file": "pc_vf_ctn_assoc_hum"
       },
       "generates_subject_type": "consensus_ctn_assoc_hum_content"
     },
-    "transcribed_ctn_assoc_other_content+'_content": {
+    "transcribed_ctn_assoc_other_content": {
       "instruction": {
         "verify": "Sélectionnez la meilleure transcription pour cette zone ou entrez la vôtre !"
       },
@@ -187,7 +220,7 @@
         "displays_transcribe_button": true
       },
       "help": {
-        "file": "pc_vf_ctn_assoc_other_content"
+        "file": "pc_vf_ctn_assoc_other"
       },
       "generates_subject_type": "consensus_ctn_assoc_other_content"
     }
