@@ -26,7 +26,7 @@ module.exports = React.createClass
 
         {
           # Workflows tabs:
-          workflow_names = {transcribe: 'transcrire', mark:'marquer', verify:'verifier'}
+          workflow_names = {transcribe: 'transcrire', mark:'marquer', verify:'vérifier'}
           workflows = (w for w in @props.workflows when w.name in Object.keys(workflow_names))
           workflows = workflows.sort (w1, w2) -> if w1.order > w2.order then 1 else -1
           workflows.map (workflow, key) =>

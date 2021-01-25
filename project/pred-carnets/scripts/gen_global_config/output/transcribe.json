@@ -262,8 +262,8 @@
                         "tool_config": {
                             "options": [
                                 {
-                                    "label": "1",
-                                    "value": "1"
+                                    "label": "Bibliographique",
+                                    "value": "bibli"
                                 },
                                 {
                                     "label": "2",

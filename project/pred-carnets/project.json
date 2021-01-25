@@ -1,8 +1,8 @@
 {
-  "title": "PRED Crowdsourcing",
-  "short_title": "PRED",
+  "title": "ArcheoText",
+  "short_title": "ArcheoText",
   "summary": "PRED Transcription de carnets de terrains en archéologie",
-  "background": "/images/background.jpg",
+  "background": "/images/imgCarnets.jpg",
   "admin_email": "",
   "logo": "/images/logo.png",
   "favicon": "/images/favicon.ico",

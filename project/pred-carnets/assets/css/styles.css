@@ -192,7 +192,6 @@ div.home-page {
 }
 .home-page p > a:first-child {
   font-size: 30px;
-  padding: 0.5em 0.8em;
   width: auto;
 }
 .home-page li:first-child {
@@ -320,6 +319,15 @@ div.home-page {
 /* Z-index issues */
 .classifier .task-area {
   z-index: 100;
+  font-size: 120% !important;
+}
+
+.task-area span {
+    font-size: 115% !important;
+}
+
+.tip {
+  font-size:73%;
 }
 
 /* Tutorial */
@@ -420,7 +428,7 @@ div.home-page {
   box-sizing: border-box;
   width: 32%;
   float: left;
-  font-size: 22px;
+  font-size: 30px;
   line-height: 36px;
   box-sizing: border-box;
   padding: 1em;

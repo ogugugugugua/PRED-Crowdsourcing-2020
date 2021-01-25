@@ -1,7 +1,7 @@
 React = require 'react'
 Draggable = require 'lib/draggable'
 
-RADIUS = 4
+RADIUS = 2
 STROKE_COLOR = '#fff'
 FILL_COLOR = '#000'
 STROKE_WIDTH = 1.5

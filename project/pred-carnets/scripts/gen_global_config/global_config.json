@@ -9,8 +9,8 @@
             "generates_subjects_for": "transcribe",
             "first_task": "pk_ctn_ecrit",
             "instructions": {
-                "pick": "<p style=\"text-align:center;font-weight:bold;\">Identifiez-vous du contenu de type <h3 style=\"text-align:center;color:{color};font-weight:bolder;font-size:1.17em;\">{subject}</h3></p>",
-                "mark": "<p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>"
+                "pick": "<h3 style=\"text-align:center;color:{color};font-weight:bolder;font-size:1.17em;\">{subject}</h3><p>Identifiez-vous du contenu de type <strong>{subject}</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
+                "mark": "<h3 style=\"text-align:center;color:{color};font-weight:bolder;font-size:1.17em;\">{subject}</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>"
             }
         },
         {
@@ -193,8 +193,8 @@
                             "description":"...",
                             "options": [
                                 {
-                                    "label": "1",
-                                    "value": "1"
+                                    "label": "Bibliographique",
+                                    "value": "bibli"
                                 },
                                 {
                                     "label": "2",

@@ -30,6 +30,7 @@ module.exports = function (config, subjects) {
             tool: "pickOne",
             help: { file: helpObjSubjPick.fileName.split('.')[0]},
             tool_config: {
+                "displays_transcribe_button": false,
                 options: [
                     {
                         value: "yes",
@@ -47,7 +48,7 @@ module.exports = function (config, subjects) {
 
     /* Génération de la tâche mark associée au sujet*/
         acc[markKey] = {
-            instruction: strFormat(config.instructions.mark, { subject: subject.label }),
+            instruction: strFormat(config.instructions.mark, { subject: subject.label,color: subjectColorsTab[idx] }),
             tool: "pickOneMarkOne",
             generates_subjects: true,
             tool_config: {},
@@ -62,7 +63,7 @@ module.exports = function (config, subjects) {
                 fileName :`pc_cat_${subject.name}_${cat.name}.md`,
                 content: `#${cat.label}\n<p>${cat.description}</p>\n`
             };
-
+        acc[markKey]['tool_config']["displays_transcribe_button"] = false;
             let newMarkTasks = {
                         type: "rectangleTool",
                         label: cat.label,
