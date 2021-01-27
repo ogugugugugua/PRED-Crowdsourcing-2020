@@ -2,8 +2,17 @@
 
 const fs = require('fs');
 const readline = require('readline');
+const program = require('commander');
+
 var output_filename = "./data_converted.json";
 var valid_time = new Date('2021-01-25');    //get rid of the older and useless records in the database
+
+program
+.option('-v, --valid_time [type]','Valid since this time')
+.parse(process.argv);
+if (program.valid_time) {
+    valid_time = new Date(Date.parse(program.valid_time));
+}
 
 var mk = [];
 var ctn = [];
@@ -34,7 +43,7 @@ function convert(file) {
     });
 }
 
-function Convert(){
+function Process(){
     convert('./data.json')
     .then(res => {
         // console.log(res);
@@ -107,4 +116,4 @@ function Convert(){
     // console.log("success");
 }
 
-Convert();
+Process();
