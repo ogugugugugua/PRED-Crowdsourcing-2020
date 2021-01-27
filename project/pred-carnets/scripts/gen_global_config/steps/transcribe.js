@@ -56,6 +56,7 @@ module.exports = function(config,subjects){
         // on crée les tâches de choix de tags si elles existent
           for(let l = 0; l < subjects[j].categories[i].tags.length; l++){
             let tagTask = subjects[j].categories[i].tags[l];
+            tagTask['options'].push({label:"Non identifiable", value: "uknown"});
             let tagTaskName = 'picktag_'+entryTaskName+'_'+tagTask.name;
             let helpObjTag = {
               fileName: `pc_tag_${tagTaskName}.md`,

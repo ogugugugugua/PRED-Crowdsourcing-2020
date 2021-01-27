@@ -123,6 +123,10 @@
                                 {
                                     "label": "Relevé en élevation",
                                     "value": "elevation"
+                                },
+                                {
+                                    "label": "Non identifiable",
+                                    "value": "uknown"
                                 }
                             ]
                         }
@@ -272,6 +276,10 @@
                                 {
                                     "label": "3",
                                     "value": "3"
+                                },
+                                {
+                                    "label": "Non identifiable",
+                                    "value": "uknown"
                                 }
                             ]
                         }

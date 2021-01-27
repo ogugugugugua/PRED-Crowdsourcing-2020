@@ -1,5 +1,3 @@
-# Additional Help  
+# Aide supplémentaire  
 
-If you have any questions, select "View A Tutorial" to return to this tutorial at any time or peruse the forum.
-
-Have fun and thanks for your help!  
+Dans le cas où vous voudriez accéder de nouveau à ce tutoriel, cliquez simplement sur le bouton "Voir le tutoriel" pour ouvrir de nouveau la modale.

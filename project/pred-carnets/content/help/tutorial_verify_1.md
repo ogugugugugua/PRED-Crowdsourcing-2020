@@ -1,5 +1,4 @@
-#Verify
+#Objectif
 
-In this task, you'll perform quality control on the transcriptions. Select the best transcription from those provided. If none appear correct, you may choose to enter your own.
-
-Once a consensus has been achieved, we'll accept the transcription as accurate and add the value to the index.
+Cette tâche a pour simple objectif de vérifier la qualité des transcriptions réalisées. Vous aurez alors la possibilité de choisir la meilleure des transcriptions parmi celles proposées mais également d'entrer la vôtre si aucune ne convient.
+Une fois qu'un consensus aura été convenu (multiple choix d'une même transcription) les informations seront ajoutées aux résultats globaux de la transcription. 
