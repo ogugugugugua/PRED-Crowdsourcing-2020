@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^7.0.0",
     "lodash": "^4.17.20",
     "randomcolor": "^0.6.2"
   }

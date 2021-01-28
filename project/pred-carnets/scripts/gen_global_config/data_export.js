@@ -2,24 +2,24 @@
 
 const fs = require('fs');
 const readline = require('readline');
-const program = require('commander');
+// const program = require('commander');
 
 var output_filename = "./data_converted.json";
-var valid_time = new Date('2021-01-25');    //get rid of the older and useless records in the database
+var valid_time = new Date('2021-01-24');    //get rid of the older and useless records in the database
 
-program
-.option('-v, --valid_time [type]','Valid since this time')
-.parse(process.argv);
-if (program.valid_time) {
-    valid_time = new Date(Date.parse(program.valid_time));
-}
+// program
+// .option('-v, --valid_time [type]','Valid since this time')
+// .parse(process.argv);
+// if (program.valid_time) {
+//     valid_time = new Date(Date.parse(program.valid_time));
+// }
 
-var mk = [];
-var ctn = [];
-var result = [];
+var mk = [];                //array to store the mark content
+var ctn = new Map();        //map to store the transcription content
+var result = [];            //final result
 
-var reg_mk = /^mk_./;
-var reg_ctn = /^ctn_./;
+var reg_mk = /^mk_./;       //regular expression to judge if a record belongs to the mark stage
+var reg_ctn = /^ctn_./;     //regular expression to judge if a record belongs to the transcription stage
 
 function convert(file) {
 
@@ -46,74 +46,37 @@ function convert(file) {
 function Process(){
     convert('./data.json')
     .then(res => {
-        // console.log(res);
-        fs.writeFileSync(output_filename, JSON.stringify(res, null, 4));
+        fs.writeFileSync(output_filename, JSON.stringify(res, null, 4));    //save intermediate result
     }).then(()=>{
-        // console.log("data length: "+data.length);
-        // var map_child_subject_id = new Map();
-        // var map_subject_id = new Map();
+
         var data = JSON.parse(fs.readFileSync(output_filename));
-
-
         for(var i=0; i<data.length;i++){
-            var updateTime = new Date(Date.parse(data[i]["updated_at"]["$date"]));
+            var updateTime = new Date(Date.parse(data[i]["updated_at"]["$date"])); 
             if (updateTime>=valid_time) {
-                // console.log("data[i][updated_at][$date]:"+data[i]["updated_at"]["$date"]+"\ttransformed:"+updateTime);
-                // map_subject_id.set(data[i]["subject_id"]["$oid"], i);
-                // console.log(data[i]["subject_id"]["$oid"]+"\t\t"+i);
-                if (reg_mk.test(data[i]["task_key"])) {
+                if (reg_mk.test(data[i]["task_key"])) {                     //get mark task and store it
                     // console.log("mk: "+data[i]["task_key"]+"\t\t"+i);
                     mk.push(data[i]);
-                }else if(reg_ctn.test(data[i]["task_key"])){
+                }else if(reg_ctn.test(data[i]["task_key"])){                //get transcription task
                     // console.log("ctn: "+data[i]["task_key"]+"\t\t"+i);
-                    ctn.push(data[i]);
+                    ctn.set(data[i]["subject_id"]["$oid"], data[i]);        //store it in a Map with its subject_id and itself
                 }
-    
-                // if(data[i]["child_subject_id"]!=null){
-                //     map_child_subject_id.set(data[i]["child_subject_id"], i);
-                // }
-                // else{
-                //     map_child_subject_id.set(i, 0);
-                // }
             }
-            
         }
-        // console.log(mk.length);
-        // console.log(ctn.length);
-    
-        // console.log("ctn length:"+ctn.length);
-        for(var i = 0; i < ctn.length; i++){
+
+        for(var i = 0; i < mk.length; i++){                                 //iterate through the mk array
             var cur = {};
-            cur["mark"] = mk[i];
-            cur["transcription"] = ctn[i];
-            result.push(cur);
+            cur["mark"] = mk[i];                                            //put the mark into the new tuple
+            var child_subject_id = mk[i]["child_subject_id"]["$oid"];       //get its corresponding transcription subject_id
+            cur["transcription"] = ctn.get(child_subject_id);               //get the corresponding transcription
+            if(cur["transcription"]!=null){
+                result.push(cur);                                           //push the tuple into the result if the transcription is not null
+            }
         }
-        // console.log("result.length: "+result.length);
-        // console.log(result);
-        var data_formatted = "./data_formatted.json";
-        fs.writeFileSync(data_formatted, JSON.stringify(result, null, 4));
+        var data_formatted = "./data_formatted.json";       
+        fs.writeFileSync(data_formatted, JSON.stringify(result, null, 4));  //write the final result into a json file
         console.log("Data has been formatted into <data_formatted.json>");
-        // map_subject_id.forEach(function(value, key) {
-        //   console.log(key + " = " + value);
-        // });
-        // console.log("length: "+map_subject_id.size);
-        // // console.log(map_child_subject_id.get(map_subject_id.get(data[0]["subject_id"])));
-        // var concat = [];
-        // var num = 0;
-        // for(var i = 0; i < data.length; i++){
-        //     if(data[i]["child_subject_id"] == null){
-        //         concat.push(data[i]);
-        //     }else{
-        //         var child_i = map_subject_id.get(data[i]["child_subject_id"]["$oid"]);
-        //         // console.log(child_i);
-        //         num++;
-        //     }
-    
-        // }
-        // console.log(num);
     })
     .catch(err => console.error(err));
-    // console.log("success");
 }
 
 Process();
