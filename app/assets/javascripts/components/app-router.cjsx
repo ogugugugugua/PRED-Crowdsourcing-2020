@@ -154,7 +154,7 @@ class AppRouter
                 <GroupBrowser project={project} title={page.group_browser} />
               </div>
           }
-          <div className="updated-at">Last Update {page.updated_at}</div>
+          <div className="updated-at">Dernière mise à jour: {page.updated_at}</div>
         </div>
 
 module.exports = AppRouter

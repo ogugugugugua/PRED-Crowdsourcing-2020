@@ -122,7 +122,7 @@ module.exports = React.createClass # rename to Classifier
           unless @getCurrentSubject() || @state.noMoreSubjects
             <DraggableModal
               header          = { "Loading transcription subjects." }
-              buttons         = {<GenericButton label='Back to Marking' href='/#/mark' />}
+              buttons         = {<GenericButton label='Retour au marquage' href='/#/mark' />}
             >
                 We are currently looking for a subject for you to {@props.workflowName}.
             </DraggableModal>
@@ -130,10 +130,10 @@ module.exports = React.createClass # rename to Classifier
 
         { if @state.noMoreSubjects
             <DraggableModal
-              header          = { if @state.userClassifiedAll then "Thanks for transcribing!" else "Nothing to transcribe" }
-              buttons         = {<GenericButton label='Continue' href='/#/mark' />}
+              header          = { if @state.userClassifiedAll then "Merci pour votre contribution!" else "Rien à transcrire" }
+              buttons         = {<GenericButton label='Continuer' href='/#/mark' />}
             >
-                Currently, there are no {@props.project.term('subject')}s for you to {@props.workflowName}. Try <a href="/#/mark">marking</a> instead!
+                Pas de {@props.project.term('subject')}s à transcrire ici pour l'instant. Essayez plutôt le <a href="/#/mark">marquage</a>!
             </DraggableModal>
 
 
