@@ -13,18 +13,6 @@
     "subject": "page",
     "mark": "zone"
   },
-  "team_emails": [
-    "maximilien.rioult@etu.univ-nantes.fr",
-    "yulin.xie@etu.univ-nantes.fr"
-  ],
-  "team": [
-    {
-      "name": "Maximilien Rioult"
-    },
-    {
-      "name": "Yulin Xie"
-    }
-   ],
   "organizations": [
     {
       "title": "Polytech Nantes",

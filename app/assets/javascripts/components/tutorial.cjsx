@@ -64,9 +64,9 @@ module.exports = React.createClass
     taskKeys = Object.keys(@props.tutorial.tasks)
 
     if @state.nextTask != null
-      doneButtonLabel = "Next"
+      doneButtonLabel = "Suivant"
     else
-      doneButtonLabel = "Done"
+      doneButtonLabel = "Terminer"
 
     progressSteps = []
     for key, step of @props.tutorial.tasks

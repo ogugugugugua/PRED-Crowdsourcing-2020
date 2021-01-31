@@ -44,17 +44,17 @@
     ],
     "subjects": [
         {
-            "name": "ctn_ecrit",
+            "name": "zone_txt_auto",
             "label": "Zone de texte autonome",
             "description": "Ce type de contenu englobe un grand nombre de catégories parmi les textes manuscrits, variant de par sa pertinence scientifique, sa subjectivité ... On peut identifier une zone de texte autonome par l'apport d'informations à travers un format de texte structuré.",
             "categories": [
                 {
                     "name": "obs_desc_inter",
                     "label": "Observation, description, interprétation",
-                    "description": "Cette catégorie de zone de texte autonome peut être identifié par la présence de plusieurs paragraphes",
+                    "description": "Cette catégorie de zone de texte autonome peut être identifiée sous la forme d'un paragraphe dans lequel l'auteur peut chercher à reporter ses observations, des descriptions de terrain mais également des interprétations diverses (à pertinence scientifique par exemple).",
                     "structure": [
                         {
-                            "name": "titre",
+                            "name": "title",
                             "label": "Titre/Label",
                             "description": "Titre ou label associé au texte marqué",
                             "optional": true,
@@ -78,7 +78,7 @@
                 {
                     "name": "comm",
                     "label": "Commentaires",
-                    "description": "Les commentaires sont ",
+                    "description": "Les commentaires peuvent prendre la forme de paragraphes dans lesquels l'auteurs réalise des commentaires concernant l ",
                     "structure": []
                 },
                 {
@@ -90,14 +90,14 @@
             ]
         },
         {
-            "name": "ctn_graph",
+            "name": "zone_graph",
             "label": "Zone graphique",
-            "description": "...",
+            "description": "Ce type de contenu regroupe l'ensemble des productions graphiques manuscrites de l'auteur.",
             "categories": [
                 { 
-                    "name": "releve",
+                    "name": "view",
                     "label": "Relevé",
-                    "description": "...",
+                    "description": "",
                     "tags":[
                         {
                             "name": "type",
@@ -124,59 +124,59 @@
                         {
                             "name": "title",
                             "label": "Titre",
-                            "description": "...",
+                            "description": "",
                             "optional": true,
                             "toolType": "textTool"
                         }
                     ]
                 },
                 {
-                    "name": "croquis_dessin_schema",
+                    "name": "croq_draw_diag",
                     "label": "Croquis,Dessin,Schéma",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 },
                 {
                     "name": "other",
                     "label": "Catégorie non référencée",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 }
             ]
         },
         {
-            "name": "ctn_imp",
+            "name": "imp_obj",
             "label": "Objet importé",
-            "description": "Les objets importés font références à des documents ajoutés (scotché, collé, ...) au carnet aussi bien au cours des fouilles qu'à postoriori.",
+            "description": "Les objets importés font références à des documents ajoutés (scotché, collé, ...) au carnet aussi bien au cours des fouilles qu'à posteriori.",
             "categories": [
                 {
                     "name": "form_enr",
                     "label": "Formulaire d'enregistrement",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 },
                 {
                     "name": "photo",
                     "label": "Photographie",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 },
                 {
-                    "name": "graph_imp",
+                    "name": "obj_graph_imp",
                     "label": "Objet graphique importé",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 },
                 {
                     "name": "other",
                     "label": "Autre catégorie",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 }
             ]
         },
         {
-            "name": "ctn_assoc",
+            "name": "zone_txt_ass",
             "label": "Zone de texte associée",
             "description": "Les annotations et autres informations complémentaires contribuent à l'évolution du contenu d'un carnet et ainsi sa complexité de transcription.",
             "categories": [
@@ -193,16 +193,20 @@
                             "description":"...",
                             "options": [
                                 {
-                                    "label": "Bibliographique",
-                                    "value": "bibli"
+                                    "label": "Interne au carnet",
+                                    "value": "int"
                                 },
                                 {
-                                    "label": "2",
-                                    "value": "2"
+                                    "label": "Article",
+                                    "value": "art"
                                 },
                                 {
-                                    "label": "3",
-                                    "value": "3"
+                                    "label": "Livre",
+                                    "value": "book"
+                                },
+                                {
+                                    "label": "Autre référence",
+                                    "value": "other"
                                 }
                             ]
                         }
@@ -212,19 +216,19 @@
                 {
                     "name": "sci",
                     "label": "Annotation scientifique",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 },
                 {
                     "name": "hum",
                     "label": "Trait d'humeur et d'humour",
-                    "description": "...",
+                    "description": "",
                     "structure": []
                 },
                 {
                     "name": "other",
                     "label": "Autre type d'annotation",
-                    "description": "...",
+                    "description": "Type d'annotation non référencée",
                     "structure": []
                 }
             ]
