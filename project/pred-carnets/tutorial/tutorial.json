@@ -32,7 +32,7 @@
           "learn_marking": {
               "next_task":"tutorial_mark_2",
               "help": {
-                  "title": "Task",
+                  "title": "La tâche",
                   "file": "tutorial_mark_1"
               }
           },
