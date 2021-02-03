@@ -118,5 +118,5 @@ module.exports = React.createClass
       <button className="pan right #{if ! @canPan('right') then 'disabled'}" title="pan right" onClick={() => @pan 'right'}></button>
       <button className="pan left #{if ! @canPan('left') then 'disabled'}" title="pan left" onClick={() => @pan 'left'}></button>
       <button className="pan down #{if ! @canPan('down') then 'disabled'}" title="pan down" onClick={() => @pan 'down'}></button>
-      <button className="reset" onClick={@reset}>reset</button>
+      <button className="reset" onClick={@reset}>Réinitialiser</button>
     </div>

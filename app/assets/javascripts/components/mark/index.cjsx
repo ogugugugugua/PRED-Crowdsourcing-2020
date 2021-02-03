@@ -197,7 +197,7 @@ module.exports = React.createClass # rename to Classifier
       <div className="subject-area">
         { if @state.noMoreSubjectSets
             style = marginTop: "50px"
-            <p style={style}>There is nothing left to do. Thanks for your work and please check back soon!</p>
+            <p style={style}>Il ne reste plus rien à faire ici, merci pour votre travail!</p>
 
           else if @state.notice
             <DraggableModal header={@state.notice.header} onDone={@state.notice.onClick}>{@state.notice.message}</DraggableModal>

@@ -60,7 +60,7 @@
           "tutorial_mark_5": {
               "next_task": null,
               "help": {
-                  "title": "Aide supplémentaire",
+                  "title": "Reconsulter ce tutoriel",
                   "file": "tutorial_mark_5"
               }
           }
@@ -71,26 +71,54 @@
         "first_task": "learn_transcribing",
         "tasks": {
           "learn_transcribing": {
-              "next_task": null,
+              "next_task": "tutorial_transcribe_2",
               "help": {
                   "title": "Zone de transcription",
                   "file": "tutorial_transcribe_1"
               }
+            },
+            "tutorial_transcribe_2": {
+              "next_task": "tutorial_transcribe_3",
+              "help": {
+                  "title": "Structure",
+                  "file": "tutorial_transcribe_2"
+              }
+            },
+            "tutorial_transcribe_3": {
+              "next_task": "tutorial_transcribe_4",
+              "help": {
+                  "title": "Contenu Illisible ?",
+                  "file": "tutorial_transcribe_3"
+              }
+            },
+            "tutorial_transcribe_4": {
+              "next_task": null,
+              "help": {
+                  "title": "Reconsulter ce tutoriel",
+                  "file": "tutorial_transcribe_4"
+              }
+            }
           }
-        }
       },
       "verify": {
         "name": "Tutoriel vérification",
         "first_task": "learn_verifying",
         "tasks": {
           "learn_verifying": {
-              "next_task": null,
+              "next_task": "tutorial_verify_2",
               "help": {
                   "title": "Zone de vérification",
                   "file": "tutorial_verify_1"
+              }
+          },
+          "tutorial_verify_2": {
+              "next_task": null,
+              "help": {
+                  "title": "Reconsulter ce tutoriel",
+                  "file": "tutorial_verify_2"
               }
           }
         }
       }
     }
-}
+  }

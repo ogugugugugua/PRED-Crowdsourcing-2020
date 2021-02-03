@@ -112,7 +112,7 @@ module.exports = React.createClass # rename to Classifier
                 {
                   if @getCurrentTask()?
                     <p>
-                      <a className="tutorial-link" onClick={@toggleTutorial}>View A Tutorial</a>
+                      <a className="tutorial-link" onClick={@toggleTutorial}>Afficher le tutoriel</a>
                     </p>
                 }
 

@@ -2,9 +2,11 @@
 
 Cette étape se divise en 2 phases de traitement de la page pour chacun des types de contenu proposés.
 <ul>
-	<li><strong>Identification</strong> du type de contenu sur la page sous la forme d'un choix "Oui" ou "Non" pour passer au type suivant.</li>
-	<li><strong>Marquage</strong> de la zone où le contenu a été identifié. Pour cela, il suffit de choisir la catégorie de contenu identifiée puis utiliser la souris pour dessiner un rectangle sur l'image. Enfin, pour valider la zone dessinée utilisez le bouton radio "Valider" ou à l'inverse pour supprimez la marque, utilisée la croix située en haut à droite de celle-ci.</li>
+	<li><strong>Identification</strong> du type de contenu sur la page.
+	Un simple choix en cliquant sur les boutons "Oui" ou "Non" permet de passer à l'étape suivante.</li>
+	<li><strong>Marquage</strong> de la zone où le contenu a été identifié.
+	Choisissez tout d'abord la catégorie de contenu adaptée parmis la liste proposée. Utilisez ensuite la souris pour dessiner un rectangle sur l'image couvrant au mieux l'ensemble du contenu.
+	Enfin, validez la zone marquée en cochant la case "Valider" en bas à droite du cadre. Pour supprimez la marque, utilisez la croix rouge située en haut à droite.</li>
 </ul>
 
-Vous pouvez accéder à la description de chaque catégorie en passant la souris sur le bouton de choix et cliquer sur le point d'interrogation <strong>[?]</strong>.
-Lorsque toutes les catégories de contenu présentes sur l'image ont été marquées, il suffit de cliquer sur le bouton "Suivant" pour passer à l'identification du prochain type.
+Lorsque toutes les catégories de contenu présentes sur l'image ont été marquées, veuillez cliquer sur le bouton "Suivant".

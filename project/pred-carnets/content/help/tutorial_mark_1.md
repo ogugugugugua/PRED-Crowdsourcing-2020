@@ -1,9 +1,9 @@
 #Objectif
 
-Cette étape de marquage est cruciale dans le processus de transcription puisque l'objectif est d'identifier sur la page présentée, les différentes zones de localisation de contenu.
+Cette étape de marquage est cruciale dans le processus de transcription. Son objectif est d'identifier les différentes zones de contenus.
 
-Votre objectif ici sera donc de diviser la page présentée en plusieurs zones selon le type de contenu qui leurs sont associées.
+Votre tâche consiste à diviser la page présentée en plusieurs zones selon le type de contenu associé.
 
-Dans le cas où la page présentée ne contient aucune zone de contenu ou bien représente une incohérence parmi les pages du carnet traitée, vous pouvez nous l'indiquer en sélectionnant le bouton "Mauvaise Page".
+Si la page présentée ne contient aucune zone de contenu ou bien représente une incohérence parmi les pages du carnet traitée, veuillez cliquer sur le bouton "Mauvaise Page".
 
 Pour passer à la prochaine tâche, cliquez simplement sur le bouton "Suivant".

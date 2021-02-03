@@ -7,7 +7,7 @@ module.exports = React.createClass
 
   getDefaultProps: ->
     classes: ''
-    doneButtonLabel: 'Done'
+    doneButtonLabel: 'Terminer'
 
   componentDidMount: ->
     # Prevent dragging from (presumably) accidentally selecting modal text on-drag
