@@ -368,8 +368,8 @@ module.exports =
         @setState
           taskKey: null
           notice:
-            header: "All Done!"
-            message: "There's nothing more for you to #{@props.workflowName} here."
+            header: "Terminé!"
+            message: "Il ne reste plus rien à faire ici."
             onClick: () =>
               @transitionTo? 'mark' # "/#/mark"
               @setState

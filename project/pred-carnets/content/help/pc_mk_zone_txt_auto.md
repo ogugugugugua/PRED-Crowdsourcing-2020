@@ -1,0 +1,2 @@
+#Comment marquer un contenu de type *Zone de texte autonome*
+<p>Ce type de contenu englobe un grand nombre de catégories parmi les textes manuscrits, variant de par sa pertinence scientifique, sa subjectivité ... On peut identifier une zone de texte autonome par l'apport d'informations à travers un format de texte structuré.</p>

@@ -4,111 +4,111 @@
     "retire_limit": 3,
     "generates_subjects": true,
     "generates_subjects_for": "verify",
-    "generates_subjects_after": 3,
+    "generates_subjects_after": 1,
     "generates_subjects_max": 10,
     "generates_subjects_method": "collect-unique",
     "tasks": {
-        "ctn_ecrit_obs_desc_inter": {
+        "transcribe_zone_txt_auto_obs_desc_inter": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_ecrit_obs_desc_inter"
+                "file": "pc_tr_zone_txt_auto_obs_desc_inter"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_ecrit_obs_desc_inter_titre": {
+                    "tr_zone_txt_auto_obs_desc_inter_title": {
                         "tool": "textTool",
                         "tool_config": {},
                         "label": "Titre/Label",
                         "help": {
-                            "file": "pc_struct_ctn_ecrit_obs_desc_inter"
+                            "file": "pc_struct_zone_txt_auto_obs_desc_inter"
                         },
-                        "generates_subject_type": "transcribed_ctn_ecrit_obs_desc_inter_titre"
+                        "generates_subject_type": "transcribed_zone_txt_auto_obs_desc_inter_title"
                     },
-                    "tr_ctn_ecrit_obs_desc_inter_date": {
+                    "tr_zone_txt_auto_obs_desc_inter_date": {
                         "tool": "dateTool",
                         "tool_config": {},
                         "label": "Date",
                         "help": {
-                            "file": "pc_struct_ctn_ecrit_obs_desc_inter"
+                            "file": "pc_struct_zone_txt_auto_obs_desc_inter"
                         },
-                        "generates_subject_type": "transcribed_ctn_ecrit_obs_desc_inter_date"
+                        "generates_subject_type": "transcribed_zone_txt_auto_obs_desc_inter_date"
                     },
-                    "tr_ctn_ecrit_obs_desc_inter": {
+                    "tr_transcribe_zone_txt_auto_obs_desc_inter": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_ecrit_obs_desc_inter_content"
+                        "generates_subject_type": "transcribed_zone_txt_auto_obs_desc_inter_content"
                     }
                 }
             }
         },
-        "ctn_ecrit_comm": {
+        "transcribe_zone_txt_auto_comm": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_ecrit_comm"
+                "file": "pc_tr_zone_txt_auto_comm"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_ecrit_comm": {
+                    "tr_transcribe_zone_txt_auto_comm": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_ecrit_comm_content"
+                        "generates_subject_type": "transcribed_zone_txt_auto_comm_content"
                     }
                 }
             }
         },
-        "ctn_ecrit_other": {
+        "transcribe_zone_txt_auto_other": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_ecrit_other"
+                "file": "pc_tr_zone_txt_auto_other"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_ecrit_other": {
+                    "tr_transcribe_zone_txt_auto_other": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_ecrit_other_content"
+                        "generates_subject_type": "transcribed_zone_txt_auto_other_content"
                     }
                 }
             }
         },
-        "ctn_graph_releve": {
+        "transcribe_zone_graph_view": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_graph_releve"
+                "file": "pc_tr_zone_graph_view"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_graph_releve_title": {
+                    "tr_zone_graph_view_title": {
                         "tool": "textTool",
                         "tool_config": {},
                         "label": "Titre",
                         "help": {
-                            "file": "pc_struct_ctn_graph_releve"
+                            "file": "pc_struct_zone_graph_view"
                         },
-                        "generates_subject_type": "transcribed_ctn_graph_releve_title"
+                        "generates_subject_type": "transcribed_zone_graph_view_title"
                     },
-                    "tr_ctn_graph_releve": {
+                    "tr_transcribe_zone_graph_view": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_graph_releve_content"
+                        "generates_subject_type": "transcribed_zone_graph_view_content"
                     },
-                    "picktag_ctn_graph_releve_type": {
+                    "picktag_zone_graph_view_type": {
                         "tool": "selectOneTool",
                         "label": "Quel est le type de relevé identifié ?",
                         "help": {
-                            "file": "pc_tag_picktag_ctn_graph_releve_type"
+                            "file": "pc_tag_picktag_zone_graph_view_type"
                         },
                         "tool_config": {
                             "options": [
@@ -134,148 +134,152 @@
                 }
             }
         },
-        "ctn_graph_croquis_dessin_schema": {
+        "transcribe_zone_graph_croq_draw_diag": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_graph_croquis_dessin_schema"
+                "file": "pc_tr_zone_graph_croq_draw_diag"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_graph_croquis_dessin_schema": {
+                    "tr_transcribe_zone_graph_croq_draw_diag": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_graph_croquis_dessin_schema_content"
+                        "generates_subject_type": "transcribed_zone_graph_croq_draw_diag_content"
                     }
                 }
             }
         },
-        "ctn_graph_other": {
+        "transcribe_zone_graph_other": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_graph_other"
+                "file": "pc_tr_zone_graph_other"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_graph_other": {
+                    "tr_transcribe_zone_graph_other": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_graph_other_content"
+                        "generates_subject_type": "transcribed_zone_graph_other_content"
                     }
                 }
             }
         },
-        "ctn_imp_form_enr": {
+        "transcribe_imp_obj_form_enr": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_imp_form_enr"
+                "file": "pc_tr_imp_obj_form_enr"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_imp_form_enr": {
+                    "tr_transcribe_imp_obj_form_enr": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_imp_form_enr_content"
+                        "generates_subject_type": "transcribed_imp_obj_form_enr_content"
                     }
                 }
             }
         },
-        "ctn_imp_photo": {
+        "transcribe_imp_obj_photo": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_imp_photo"
+                "file": "pc_tr_imp_obj_photo"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_imp_photo": {
+                    "tr_transcribe_imp_obj_photo": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_imp_photo_content"
+                        "generates_subject_type": "transcribed_imp_obj_photo_content"
                     }
                 }
             }
         },
-        "ctn_imp_graph_imp": {
+        "transcribe_imp_obj_obj_graph_imp": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_imp_graph_imp"
+                "file": "pc_tr_imp_obj_obj_graph_imp"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_imp_graph_imp": {
+                    "tr_transcribe_imp_obj_obj_graph_imp": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_imp_graph_imp_content"
+                        "generates_subject_type": "transcribed_imp_obj_obj_graph_imp_content"
                     }
                 }
             }
         },
-        "ctn_imp_other": {
+        "transcribe_imp_obj_other": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_imp_other"
+                "file": "pc_tr_imp_obj_other"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_imp_other": {
+                    "tr_transcribe_imp_obj_other": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_imp_other_content"
+                        "generates_subject_type": "transcribed_imp_obj_other_content"
                     }
                 }
             }
         },
-        "ctn_assoc_ref": {
+        "transcribe_zone_txt_ass_ref": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_assoc_ref"
+                "file": "pc_tr_zone_txt_ass_ref"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_assoc_ref": {
+                    "tr_transcribe_zone_txt_ass_ref": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_assoc_ref_content"
+                        "generates_subject_type": "transcribed_zone_txt_ass_ref_content"
                     },
-                    "picktag_ctn_assoc_ref_type": {
+                    "picktag_zone_txt_ass_ref_type": {
                         "tool": "selectOneTool",
                         "label": "Quel est le type de référence identifiée ?",
                         "help": {
-                            "file": "pc_tag_picktag_ctn_assoc_ref_type"
+                            "file": "pc_tag_picktag_zone_txt_ass_ref_type"
                         },
                         "tool_config": {
                             "options": [
                                 {
-                                    "label": "Bibliographique",
-                                    "value": "bibli"
+                                    "label": "Interne au carnet",
+                                    "value": "int"
                                 },
                                 {
-                                    "label": "2",
-                                    "value": "2"
+                                    "label": "Article",
+                                    "value": "art"
                                 },
                                 {
-                                    "label": "3",
-                                    "value": "3"
+                                    "label": "Livre",
+                                    "value": "book"
+                                },
+                                {
+                                    "label": "Autre référence",
+                                    "value": "other"
                                 },
                                 {
                                     "label": "Non identifiable",
@@ -287,56 +291,56 @@
                 }
             }
         },
-        "ctn_assoc_sci": {
+        "transcribe_zone_txt_ass_sci": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_assoc_sci"
+                "file": "pc_tr_zone_txt_ass_sci"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_assoc_sci": {
+                    "tr_transcribe_zone_txt_ass_sci": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_assoc_sci_content"
+                        "generates_subject_type": "transcribed_zone_txt_ass_sci_content"
                     }
                 }
             }
         },
-        "ctn_assoc_hum": {
+        "transcribe_zone_txt_ass_hum": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_assoc_hum"
+                "file": "pc_tr_zone_txt_ass_hum"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_assoc_hum": {
+                    "tr_transcribe_zone_txt_ass_hum": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_assoc_hum_content"
+                        "generates_subject_type": "transcribed_zone_txt_ass_hum_content"
                     }
                 }
             }
         },
-        "ctn_assoc_other": {
+        "transcribe_zone_txt_ass_other": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_ctn_assoc_other"
+                "file": "pc_tr_zone_txt_ass_other"
             },
             "tool_config": {
                 "tools": {
-                    "tr_ctn_assoc_other": {
+                    "tr_transcribe_zone_txt_ass_other": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_ctn_assoc_other_content"
+                        "generates_subject_type": "transcribed_zone_txt_ass_other_content"
                     }
                 }
             }

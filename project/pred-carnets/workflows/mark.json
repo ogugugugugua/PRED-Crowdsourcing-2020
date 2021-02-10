@@ -7,11 +7,11 @@
   "generates_subjects_for": "transcribe",
   "first_task": "pk_ctn_ecrit",
   "tasks": {
-    "pk_ctn_ecrit": {
-      "instruction": "<h3 style=\"text-align:center;color:#0f9b14;font-weight:bolder;font-size:1.17em;\">Zone de texte autonome</h3><p>Identifiez-vous du contenu de type <strong>Zone de texte autonome</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
+    "pk_zone_txt_auto": {
+      "instruction": "<h3 style=\"text-align:center;color:#bc750b;font-weight:bolder;font-size:1.17em;\">Zone de texte autonome</h3><p>Identifiez-vous du contenu de type <strong>Zone de texte autonome</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pk_ctn_ecrit"
+        "file": "pc_pk_zone_txt_auto"
       },
       "tool_config": {
         "displays_transcribe_button": false,
@@ -19,7 +19,7 @@
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mk_ctn_ecrit"
+            "next_task": "mk_zone_txt_auto"
           },
           {
             "value": "no",
@@ -27,10 +27,10 @@
           }
         ]
       },
-      "next_task": "pk_ctn_graph"
+      "next_task": "pk_zone_graph"
     },
-    "mk_ctn_ecrit": {
-      "instruction": "<h3 style=\"text-align:center;color:#0f9b14;font-weight:bolder;font-size:1.17em;\">Zone de texte autonome</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
+    "mk_zone_txt_auto": {
+      "instruction": "<h3 style=\"text-align:center;color:#bc750b;font-weight:bolder;font-size:1.17em;\">Zone de texte autonome</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
@@ -39,42 +39,42 @@
           {
             "type": "rectangleTool",
             "label": "Observation, description, interprétation",
-            "color": "#8c65c6",
-            "generates_subject_type": "ctn_ecrit_obs_desc_inter",
+            "color": "#06439e",
+            "generates_subject_type": "zone_txt_auto_obs_desc_inter",
             "help": {
-              "file": "pc_cat_ctn_ecrit_obs_desc_inter"
+              "file": "pc_cat_zone_txt_auto_obs_desc_inter"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Commentaires",
-            "color": "#f2a61a",
-            "generates_subject_type": "ctn_ecrit_comm",
+            "color": "#d81ad5",
+            "generates_subject_type": "zone_txt_auto_comm",
             "help": {
-              "file": "pc_cat_ctn_ecrit_comm"
+              "file": "pc_cat_zone_txt_auto_comm"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Autre catégorie",
-            "color": "#47c633",
-            "generates_subject_type": "ctn_ecrit_other",
+            "color": "#aae871",
+            "generates_subject_type": "zone_txt_auto_other",
             "help": {
-              "file": "pc_cat_ctn_ecrit_other"
+              "file": "pc_cat_zone_txt_auto_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mk_ctn_ecrit"
+        "file": "pc_mk_zone_txt_auto"
       },
-      "next_task": "pk_ctn_graph"
+      "next_task": "pk_zone_graph"
     },
-    "pk_ctn_graph": {
-      "instruction": "<h3 style=\"text-align:center;color:#038e01;font-weight:bolder;font-size:1.17em;\">Zone graphique</h3><p>Identifiez-vous du contenu de type <strong>Zone graphique</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
+    "pk_zone_graph": {
+      "instruction": "<h3 style=\"text-align:center;color:#03036d;font-weight:bolder;font-size:1.17em;\">Zone graphique</h3><p>Identifiez-vous du contenu de type <strong>Zone graphique</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pk_ctn_graph"
+        "file": "pc_pk_zone_graph"
       },
       "tool_config": {
         "displays_transcribe_button": false,
@@ -82,7 +82,7 @@
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mk_ctn_graph"
+            "next_task": "mk_zone_graph"
           },
           {
             "value": "no",
@@ -90,10 +90,10 @@
           }
         ]
       },
-      "next_task": "pk_ctn_imp"
+      "next_task": "pk_imp_obj"
     },
-    "mk_ctn_graph": {
-      "instruction": "<h3 style=\"text-align:center;color:#038e01;font-weight:bolder;font-size:1.17em;\">Zone graphique</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
+    "mk_zone_graph": {
+      "instruction": "<h3 style=\"text-align:center;color:#03036d;font-weight:bolder;font-size:1.17em;\">Zone graphique</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
@@ -102,42 +102,42 @@
           {
             "type": "rectangleTool",
             "label": "Relevé",
-            "color": "#19f20e",
-            "generates_subject_type": "ctn_graph_releve",
+            "color": "#450775",
+            "generates_subject_type": "zone_graph_view",
             "help": {
-              "file": "pc_cat_ctn_graph_releve"
+              "file": "pc_cat_zone_graph_view"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Croquis,Dessin,Schéma",
-            "color": "#bac7ff",
-            "generates_subject_type": "ctn_graph_croquis_dessin_schema",
+            "color": "#b3daef",
+            "generates_subject_type": "zone_graph_croq_draw_diag",
             "help": {
-              "file": "pc_cat_ctn_graph_croquis_dessin_schema"
+              "file": "pc_cat_zone_graph_croq_draw_diag"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Catégorie non référencée",
-            "color": "#5fdbdd",
-            "generates_subject_type": "ctn_graph_other",
+            "color": "#119b92",
+            "generates_subject_type": "zone_graph_other",
             "help": {
-              "file": "pc_cat_ctn_graph_other"
+              "file": "pc_cat_zone_graph_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mk_ctn_graph"
+        "file": "pc_mk_zone_graph"
       },
-      "next_task": "pk_ctn_imp"
+      "next_task": "pk_imp_obj"
     },
-    "pk_ctn_imp": {
-      "instruction": "<h3 style=\"text-align:center;color:#000068;font-weight:bolder;font-size:1.17em;\">Objet importé</h3><p>Identifiez-vous du contenu de type <strong>Objet importé</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
+    "pk_imp_obj": {
+      "instruction": "<h3 style=\"text-align:center;color:#dbb013;font-weight:bolder;font-size:1.17em;\">Objet importé</h3><p>Identifiez-vous du contenu de type <strong>Objet importé</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pk_ctn_imp"
+        "file": "pc_pk_imp_obj"
       },
       "tool_config": {
         "displays_transcribe_button": false,
@@ -145,7 +145,7 @@
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mk_ctn_imp"
+            "next_task": "mk_imp_obj"
           },
           {
             "value": "no",
@@ -153,10 +153,10 @@
           }
         ]
       },
-      "next_task": "pk_ctn_assoc"
+      "next_task": "pk_zone_txt_ass"
     },
-    "mk_ctn_imp": {
-      "instruction": "<h3 style=\"text-align:center;color:#000068;font-weight:bolder;font-size:1.17em;\">Objet importé</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
+    "mk_imp_obj": {
+      "instruction": "<h3 style=\"text-align:center;color:#dbb013;font-weight:bolder;font-size:1.17em;\">Objet importé</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
@@ -165,51 +165,51 @@
           {
             "type": "rectangleTool",
             "label": "Formulaire d'enregistrement",
-            "color": "#64fc64",
-            "generates_subject_type": "ctn_imp_form_enr",
+            "color": "#ed97c8",
+            "generates_subject_type": "imp_obj_form_enr",
             "help": {
-              "file": "pc_cat_ctn_imp_form_enr"
+              "file": "pc_cat_imp_obj_form_enr"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Photographie",
-            "color": "#12e5ed",
-            "generates_subject_type": "ctn_imp_photo",
+            "color": "#b585dd",
+            "generates_subject_type": "imp_obj_photo",
             "help": {
-              "file": "pc_cat_ctn_imp_photo"
+              "file": "pc_cat_imp_obj_photo"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Objet graphique importé",
-            "color": "#e062a1",
-            "generates_subject_type": "ctn_imp_graph_imp",
+            "color": "#c2c3fc",
+            "generates_subject_type": "imp_obj_obj_graph_imp",
             "help": {
-              "file": "pc_cat_ctn_imp_graph_imp"
+              "file": "pc_cat_imp_obj_obj_graph_imp"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Autre catégorie",
-            "color": "#e58c82",
-            "generates_subject_type": "ctn_imp_other",
+            "color": "#a7f9bd",
+            "generates_subject_type": "imp_obj_other",
             "help": {
-              "file": "pc_cat_ctn_imp_other"
+              "file": "pc_cat_imp_obj_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mk_ctn_imp"
+        "file": "pc_mk_imp_obj"
       },
-      "next_task": "pk_ctn_assoc"
+      "next_task": "pk_zone_txt_ass"
     },
-    "pk_ctn_assoc": {
-      "instruction": "<h3 style=\"text-align:center;color:#6a9e04;font-weight:bolder;font-size:1.17em;\">Zone de texte associée</h3><p>Identifiez-vous du contenu de type <strong>Zone de texte associée</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
+    "pk_zone_txt_ass": {
+      "instruction": "<h3 style=\"text-align:center;color:#991706;font-weight:bolder;font-size:1.17em;\">Zone de texte associée</h3><p>Identifiez-vous du contenu de type <strong>Zone de texte associée</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
       "tool": "pickOne",
       "help": {
-        "file": "pc_pk_ctn_assoc"
+        "file": "pc_pk_zone_txt_ass"
       },
       "tool_config": {
         "displays_transcribe_button": false,
@@ -217,7 +217,7 @@
           {
             "value": "yes",
             "label": "Oui",
-            "next_task": "mk_ctn_assoc"
+            "next_task": "mk_zone_txt_ass"
           },
           {
             "value": "no",
@@ -227,8 +227,8 @@
       },
       "next_task": null
     },
-    "mk_ctn_assoc": {
-      "instruction": "<h3 style=\"text-align:center;color:#6a9e04;font-weight:bolder;font-size:1.17em;\">Zone de texte associée</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
+    "mk_zone_txt_ass": {
+      "instruction": "<h3 style=\"text-align:center;color:#991706;font-weight:bolder;font-size:1.17em;\">Zone de texte associée</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>",
       "tool": "pickOneMarkOne",
       "generates_subjects": true,
       "tool_config": {
@@ -237,43 +237,43 @@
           {
             "type": "rectangleTool",
             "label": "Références",
-            "color": "#cae569",
-            "generates_subject_type": "ctn_assoc_ref",
+            "color": "#be0fc1",
+            "generates_subject_type": "zone_txt_ass_ref",
             "help": {
-              "file": "pc_cat_ctn_assoc_ref"
+              "file": "pc_cat_zone_txt_ass_ref"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Annotation scientifique",
-            "color": "#9de9ea",
-            "generates_subject_type": "ctn_assoc_sci",
+            "color": "#a7f9a7",
+            "generates_subject_type": "zone_txt_ass_sci",
             "help": {
-              "file": "pc_cat_ctn_assoc_sci"
+              "file": "pc_cat_zone_txt_ass_sci"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Trait d'humeur et d'humour",
-            "color": "#8fc6f7",
-            "generates_subject_type": "ctn_assoc_hum",
+            "color": "#1c60ff",
+            "generates_subject_type": "zone_txt_ass_hum",
             "help": {
-              "file": "pc_cat_ctn_assoc_hum"
+              "file": "pc_cat_zone_txt_ass_hum"
             }
           },
           {
             "type": "rectangleTool",
             "label": "Autre type d'annotation",
-            "color": "#dda4f4",
-            "generates_subject_type": "ctn_assoc_other",
+            "color": "#85e295",
+            "generates_subject_type": "zone_txt_ass_other",
             "help": {
-              "file": "pc_cat_ctn_assoc_other"
+              "file": "pc_cat_zone_txt_ass_other"
             }
           }
         ]
       },
       "help": {
-        "file": "pc_mk_ctn_assoc"
+        "file": "pc_mk_zone_txt_ass"
       },
       "next_task": null
     }

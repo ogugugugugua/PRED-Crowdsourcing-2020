@@ -101,7 +101,7 @@ module.exports = function (config, subjects) {
     // generate help file
     let tmp = { tasks : markTasks };
 
-    let markCfg = Object.assign(markConfig,temp);
+    let markCfg = Object.assign(markConfig,tmp);
 
     // create mark.json
     fs.writeFileSync('./output/'+config.name+'.json', JSON.stringify(markCfg,null,2));
