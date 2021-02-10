@@ -242,26 +242,26 @@
                 }
             }
         },
-        "transcribe_zone_txt_ass_ref": {
+        "transcribe_zone_txt_assoc_ref": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_zone_txt_ass_ref"
+                "file": "pc_tr_zone_txt_assoc_ref"
             },
             "tool_config": {
                 "tools": {
-                    "tr_transcribe_zone_txt_ass_ref": {
+                    "tr_transcribe_zone_txt_assoc_ref": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_zone_txt_ass_ref_content"
+                        "generates_subject_type": "transcribed_zone_txt_assoc_ref_content"
                     },
-                    "picktag_zone_txt_ass_ref_type": {
+                    "picktag_zone_txt_assoc_ref_type": {
                         "tool": "selectOneTool",
                         "label": "Quel est le type de référence identifiée ?",
                         "help": {
-                            "file": "pc_tag_picktag_zone_txt_ass_ref_type"
+                            "file": "pc_tag_picktag_zone_txt_assoc_ref_type"
                         },
                         "tool_config": {
                             "options": [
@@ -291,56 +291,56 @@
                 }
             }
         },
-        "transcribe_zone_txt_ass_sci": {
+        "transcribe_zone_txt_assoc_sci": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_zone_txt_ass_sci"
+                "file": "pc_tr_zone_txt_assoc_sci"
             },
             "tool_config": {
                 "tools": {
-                    "tr_transcribe_zone_txt_ass_sci": {
+                    "tr_transcribe_zone_txt_assoc_sci": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_zone_txt_ass_sci_content"
+                        "generates_subject_type": "transcribed_zone_txt_assoc_sci_content"
                     }
                 }
             }
         },
-        "transcribe_zone_txt_ass_hum": {
+        "transcribe_zone_txt_assoc_hum": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_zone_txt_ass_hum"
+                "file": "pc_tr_zone_txt_assoc_hum"
             },
             "tool_config": {
                 "tools": {
-                    "tr_transcribe_zone_txt_ass_hum": {
+                    "tr_transcribe_zone_txt_assoc_hum": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_zone_txt_ass_hum_content"
+                        "generates_subject_type": "transcribed_zone_txt_assoc_hum_content"
                     }
                 }
             }
         },
-        "transcribe_zone_txt_ass_other": {
+        "transcribe_zone_txt_assoc_other": {
             "tool": "compositeTool",
             "instruction": "Proposez des choix de tags adaptés et les meilleures transcriptions des éléments suivants, s'ils sont présents.",
             "generates_subjects": true,
             "help": {
-                "file": "pc_tr_zone_txt_ass_other"
+                "file": "pc_tr_zone_txt_assoc_other"
             },
             "tool_config": {
                 "tools": {
-                    "tr_transcribe_zone_txt_ass_other": {
+                    "tr_transcribe_zone_txt_assoc_other": {
                         "tool": "textAreaTool",
                         "tool_config": {},
                         "label": "Contenu principal",
-                        "generates_subject_type": "transcribed_zone_txt_ass_other_content"
+                        "generates_subject_type": "transcribed_zone_txt_assoc_other_content"
                     }
                 }
             }

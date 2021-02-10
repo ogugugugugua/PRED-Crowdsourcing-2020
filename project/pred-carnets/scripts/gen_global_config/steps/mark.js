@@ -78,7 +78,7 @@ module.exports = function (config, subjects) {
                         type: "rectangleTool",
                         label: cat.label,
                         color: catColorsTab[idx2],
-                        generates_subject_type: `${subject.name}_${cat.name}`,
+                        generates_subject_type: `transcribe_${subject.name}_${cat.name}`,
                         help: {file: helpObjCat.fileName.split('.')[0]}
                 };
             helpFiles.push(helpObjCat);

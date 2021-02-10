@@ -7,7 +7,7 @@
             "generates_subjects": true,
             "generates_subjects_after": 1,
             "generates_subjects_for": "transcribe",
-            "first_task": "pk_ctn_ecrit",
+            "first_task": "pk_zone_txt_auto",
             "instructions": {
                 "pick": "<h3 style=\"text-align:center;color:{color};font-weight:bolder;font-size:1.17em;\">{subject}</h3><p>Identifiez-vous du contenu de type <strong>{subject}</strong> sur cette page ?</p><p class='tip'>Cliquez sur <strong>Oui</strong> pour passer à la phase de marquage des zones identifiées.</p><p class='tip'>Cliquez sur <strong>Non</strong> pour passer au type de contenu suivant.</p>",
                 "mark": "<h3 style=\"text-align:center;color:{color};font-weight:bolder;font-size:1.17em;\">{subject}</h3><p>Si elle sont présentes, **marquez** l'ensemble des catégories suivantes sur la page.</p>"
@@ -16,7 +16,7 @@
         {
             "name": "transcribe",
             "label": "Transcribe Workflow",
-            "delete_limit": 3,
+            "retire_limit": 3,
             "generates_subjects": true,
             "generates_subjects_for": "verify",
             "generates_subjects_after": 1,
@@ -176,7 +176,7 @@
             ]
         },
         {
-            "name": "zone_txt_ass",
+            "name": "zone_txt_assoc",
             "label": "Zone de texte associée",
             "description": "Les annotations et autres informations complémentaires contribuent à l'évolution du contenu d'un carnet et ainsi sa complexité de transcription.",
             "categories": [

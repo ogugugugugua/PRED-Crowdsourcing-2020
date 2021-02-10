@@ -107,7 +107,7 @@ module.exports = React.createClass
                 fill={TEXT_COLOR}
                 stroke="none">
 
-                DONE
+                VALIDER
               </text>
 
               <path
